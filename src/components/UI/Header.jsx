@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       // marginTop: "-5em",
-      color: 'red'
+      // color: 'red'
     },
     color: theme.palette.primary.main,
     marginLeft: "3em",
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       // marginTop: "5em",
       marginLeft: "1px",
-      color: 'yellow'
+      // color: 'yellow'
     },
     // [theme.breakpoints.down("md")]: {
     //   // marginTop: "-5em",
@@ -138,14 +138,18 @@ const useStyles = makeStyles((theme) => ({
   },
   drawer: {
     backgroundColor: theme.palette.primary.main,
+    height: '100%'
   },
   drawerList: {
     color: 'black',
-    fontSize: '13px',
-    fontWeight: '50px'
+    fontSize: '17px',
+    fontWeight: '50px',
+    marginLeft: '5px'
   },
   drawerRegBtnItem: {
-    color: theme.palette.secondary.main
+    color: theme.palette.secondary.main,
+    fontSize: '17px',
+    marginLeft: '5px'
   }
 }));
 
@@ -241,25 +245,25 @@ export default function Header() {
       >
         <div className={classes.growDrawer} />
         <List disablePadding>
-          <ListItem divider button onClick={() => setOpendrawer(false)}>
+          <ListItem  button onClick={() => setOpendrawer(false)}>
             <ListItemText disableTypography className={classes.drawerList}>Home</ListItemText>
           </ListItem>
-          <ListItem divider button onClick={() => setOpendrawer(false)}>
+          <ListItem  button onClick={() => setOpendrawer(false)}>
             <ListItemText disableTypography className={classes.drawerList}>Services</ListItemText>
           </ListItem>
-          <ListItem divider button onClick={() => setOpendrawer(false)}>
+          <ListItem  button onClick={() => setOpendrawer(false)}>
             <ListItemText disableTypography className={classes.drawerList}>Home</ListItemText>
           </ListItem>
-          <ListItem divider button onClick={() => setOpendrawer(false)}>
+          <ListItem  button onClick={() => setOpendrawer(false)}>
             <ListItemText disableTypography className={classes.drawerList}>Contacts</ListItemText>
           </ListItem>
-          <ListItem divider button onClick={() => setOpendrawer(false)}>
+          <ListItem  button onClick={() => setOpendrawer(false)}>
             <ListItemText disableTypography className={classes.drawerList}>Contacts</ListItemText>
           </ListItem>
-          <ListItem divider button onClick={() => setOpendrawer(false)}>
+          <ListItem  button onClick={() => setOpendrawer(false)}>
             <ListItemText disableTypography className={classes.drawerList}>Login</ListItemText>
           </ListItem>
-          <ListItem divider button onClick={() => setOpendrawer(false)} >
+          <ListItem  button onClick={() => setOpendrawer(false)} >
             <ListItemText disableTypography className={classes.drawerRegBtnItem}>Register</ListItemText>
           </ListItem>
         </List>

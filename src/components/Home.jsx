@@ -70,6 +70,28 @@ const useStyles = makeStyles((theme) => ({
       fontWeight:'lighter',
     }
   },
+  cont: {
+    [theme.breakpoints.down("sm")]: {
+      height: "100% !important",
+    },
+    height: "100% !important",
+    maxWidth: "100%",
+    transition: '0.3s',
+    // color: 'red',
+    // display: 'none'
+    "& div " : {
+      "& Typography" : {
+        display:'none'
+      }
+    },
+    "&:hover": {
+      backgroundColor: theme.palette.tertiary.main,
+     
+      // transform: 'translate(50%)',
+      // display: 'inline !important'
+    },
+    // opacity: '0.5px'
+  },
 
  
 
@@ -133,22 +155,7 @@ banner1:{
 
     }
   },
-  cont: {
-    [theme.breakpoints.down("sm")]: {
-      height: "100% !important",
-    },
-    height: "100% !important",
-    maxWidth: "100%",
-    transition: '0.3s',
-    // display: 'none'
-
-    "&:hover": {
-      backgroundColor: theme.palette.tertiary.main,
-      // transform: 'translate(50%)',
-      // display: 'inline !important'
-    },
-    // opacity: '0.5px'
-  },
+  
   fontSize: {
     fontSize: "13px",
   },
@@ -170,9 +177,9 @@ banner1:{
    marginTop: '10em',
    marginLeft: '80px',
    fontSize: '13px',
-   color:'none',
+  //  color:'red',
    "&:hover": {
-     display: 'inline-block'
+    //  display: 'inline-block'
    }
  }
 }));

@@ -15,7 +15,7 @@ function App() {
          <Route exact path='/' component={Home} />
        </Switch>
      </Router>
-     <Footer />
+     {/* <Footer /> */}
     </ThemeProvider>
   );
 }
