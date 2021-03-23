@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Box, Container } from "@material-ui/core";
+import { Grid, Typography, Box, Container, useTheme, useMediaQuery } from "@material-ui/core";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -11,6 +11,18 @@ import { fade, makeStyles } from "@material-ui/core/styles";
  **/
 
 const useStyles = makeStyles((theme) => ({
+    secondSection:{
+        // marginTop:'150px',
+        [theme.breakpoints.down('sm')]: {
+          maxWidth: '750px'
+        },
+        [theme.breakpoints.up('md')]: {
+          maxWidth: '960px'
+        },
+        [theme.breakpoints.up('lg')]: {
+          maxWidth: '1280px'
+        },
+      },
   icons: {
     fontSize: "25px",
     margin: "6px",
@@ -39,10 +51,26 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "10px",
     fontSize: "24px",
   },
+  firstTypo2 :{
+    marginBottom: "1em",
+    color: theme.palette.primary.main,
+    fontWeight: "10px",
+    fontSize: "24px",
+    [theme.breakpoints.down('xs')]: {
+        marginTop: '3em',
+        
+    }
+  },
   lastTypo: {
     color: theme.palette.primary.main,
     fontWeight: "10px",
 
+  },
+  thirdGrid : {
+    [theme.breakpoints.down('xs')]: {
+        marginTop: '3em',
+        
+    }
   },
   secondTypo: {
     color: theme.palette.primary.main,
@@ -51,6 +79,12 @@ const useStyles = makeStyles((theme) => ({
   boxContainer: {
     marginTop: "1em",
   },
+  lastGrid : {
+    [theme.breakpoints.down('xs')]: {
+        marginBottom: '2em',
+        
+    }
+  }
 }));
 const defaultProps = {
   bgcolor: "#98dbf3",
@@ -62,16 +96,19 @@ const defaultProps = {
 
 const Footer = (props) => {
   const classes = useStyles();
+  const theme = useTheme()
+  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
+
   return (
     <Grid container direction="column" className={classes.mainContainer}>
-      <Container>
-        <Grid item container className={classes.secCont}>
+      <Container className={classes.secondSection}>
+        <Grid item container direction={matchesXS ? 'column' : 'row'} className={classes.secCont}>
           <Grid
             item
             container
             alignItems="center"
             direction="column"
-            xs={4}
+            xs
             className={classes.firstGrid}
           >
             <Typography variant="h4" className={classes.firstTypo}>
@@ -100,8 +137,8 @@ const Footer = (props) => {
             </Box>
           </Grid>
 
-          <Grid item xs={4} container justify="center">
-            <Typography variant="h4" className={classes.firstTypo}>
+          <Grid item xs container justify="center">
+            <Typography variant="h4" className={classes.firstTypo2}>
               Categories/Tags
             </Typography>
           </Grid>
@@ -110,8 +147,9 @@ const Footer = (props) => {
             item
             container
             direction="column"
-            xs={4}
+            xs
             style={{ textAlign: "center" }}
+            className={classes.thirdGrid}
             alignItems="center"
           >
             <Typography variant="h4" className={classes.firstTypo}>
@@ -136,7 +174,7 @@ const Footer = (props) => {
             </Box>
           </Grid>
         </Grid>
-        <Grid item container direction='column' alignItems="center">
+        <Grid item container direction='column' alignItems="center" className={classes.lastGrid}>
           <Typography variant="h4" className={classes.lastTypo}>
             Lorem ipsum
           </Typography>
