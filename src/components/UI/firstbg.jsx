@@ -88,7 +88,7 @@ const FirstBaground = (props) => {
   return (
     <Grid container className={classes.bg}>
       <Grid container className={classes.cont}>
-        <Header />
+        {/* <Header /> */}
         <Grid item container style={{}} className={classes.ImageText}>
           <Grid justify="center" container className={classes.header}>
             <Grid item container justify="center">
