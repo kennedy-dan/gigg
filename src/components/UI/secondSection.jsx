@@ -125,6 +125,9 @@ const useStyles = makeStyles((theme) => ({
       "& p": {
         marginTop:'-5px',
         fontWeight:'lighter',
+      },
+      [theme.breakpoints.up('md')] : {
+        paddingTop: '125px'
       }
     },
      subText:{
@@ -231,26 +234,6 @@ const SecondSection = (props) => {
           </div>
           </Grid>
         </Grid>
-    {/* <Grid item direction="column" className={classes.firstCont}>
-      <Grid item container justify="center" className={`${classes.bg} ${classes.banner1}`}>
-        <Grid container item className={classes.cont}>
-          <div style={{position: 'absolute'}} className={classes.hiddenTypo}>
-            <Typography className={classes.hoverTypo}>Accomodation</Typography>
-          </div>
-        </Grid>
-      </Grid>
-      <Grid item container direction="column" alignItems="center" className={classes.typeCont}>
-        <Typography className={classes.typoTypes}>
-          <b>Meeting room</b>
-        </Typography>
-        <Typography className={classes.typoTypes}>
-          Lorem ipsum dolor sit amet,
-        </Typography>
-        <Typography className={classes.typoTypes}>
-          Lorem ipsum dolor ,
-        </Typography>
-      </Grid>
-    </Grid> */}
    
   </Grid>
   </Container>

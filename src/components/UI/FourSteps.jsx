@@ -80,7 +80,10 @@ const useStyles = makeStyles((theme) => ({
     // marginTop: "1.5em",
     // marginLeft: "-1.5em",
     marginRight: "1.5em",
-    marginBottom: '2em',
+    marginBottom: '4em',
+    [theme.breakpoints.down('sm')] : {
+      marginBottom: '8em'
+    },
     color: "#9cf744",
     // paddingRight: '5px'
     // alignSelf: 'center'
