@@ -15,13 +15,17 @@ import bg5 from '../../assets/section1bg.jpg'
 
 const useStyles = makeStyles((theme) => ({
     firstsec1: {
-        // marginLeft: "9.1em",
+      [theme.breakpoints.down('xs')] : {
+        marginTop: '1em'
+      }
       },
       firstsec2: {
-        // marginRight: "10.5em",
+        [theme.breakpoints.down('xs')] : {
+          marginTop: '1em'
+        }
       },
       secondSection:{
-        marginTop:'100px',
+        marginTop:'150px',
         [theme.breakpoints.down('sm')]: {
           maxWidth: '600px'
         },
@@ -54,7 +58,12 @@ const useStyles = makeStyles((theme) => ({
           maxHeight: '270px',
       marginBottom: '6em'
 
-        }
+        },
+        [theme.breakpoints.down("xs")]: {      
+          maxWidth:'400px',
+          height: '280px',
+          marginBottom: '6em'
+        },
      },
       bg3: {
         backgroundImage: `url(${bg3})` ,
@@ -138,7 +147,7 @@ const SecondSection = (props) => {
 
 
   return(
-    <Container className={  `${classes.secondSection} container`} >
+    <Container className={classes.secondSection} >
   
   <Grid item container justify={matchesXS ? 'center': 'inherit'}  className={  classes.subText} >
   <Typography >

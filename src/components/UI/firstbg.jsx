@@ -58,19 +58,29 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "0.9em",
     textAlign: "center",
     width: "40%",
-    [theme.breakpoints.down('sm')]: {
-      width: '70%'
+    [theme.breakpoints.down("sm")]: {
+      width: "70%",
     },
+    [theme.breakpoints.down("xs")]: {
+      width: "80%",
+    },
+  },
+  card: {
+    width: "40em",
+    [theme.breakpoints.down("xs")]: {
+      width: "90%",
+    },
+  },
+  ImageText: {
+    position: "absolute",
+    marginTop: "4em",
     [theme.breakpoints.down('xs')]: {
-      width: '80%'
+      marginTop:'9em'
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginTop:'7em'
     }
   },
-  card:{
-    width: "40em" ,
-    [theme.breakpoints.down('xs')]:{
-      width: '90%'
-    }
-  }
 }));
 
 const FirstBaground = (props) => {
@@ -79,7 +89,7 @@ const FirstBaground = (props) => {
     <Grid container className={classes.bg}>
       <Grid container className={classes.cont}>
         <Header />
-        <Grid item container style={{ position: "absolute", marginTop: "4em" }}>
+        <Grid item container style={{}} className={classes.ImageText}>
           <Grid justify="center" container className={classes.header}>
             <Grid item container justify="center">
               <Typography style={{}} className={classes.mainText}>

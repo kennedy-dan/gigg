@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Grid, Typography, Box } from "@material-ui/core";
+import { Button, Grid, Typography, Box,useTheme, useMediaQuery, Container } from "@material-ui/core";
 import { fade, makeStyles } from "@material-ui/core/styles";
 
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
@@ -16,6 +16,16 @@ const useStyles = makeStyles((theme) => ({
   },
   firstsec2: {
     marginRight: "12.5em",
+  },
+  secondSection:{
+    marginTop:'10px',
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '600px'
+    },
+    [theme.breakpoints.up('md')]: {
+      maxWidth: '960px'
+    },
+   
   },
   banner1:{
     // width: "270px",
@@ -69,9 +79,11 @@ const useStyles = makeStyles((theme) => ({
   arrowIcon: {
     // marginTop: "1.5em",
     // marginLeft: "-1.5em",
-    // marginRight: "-1.5em",
+    marginRight: "1.5em",
+    marginBottom: '2em',
     color: "#9cf744",
-    alignSelf: 'center'
+    // paddingRight: '5px'
+    // alignSelf: 'center'
   },
   accIcon: {
     margin: "11px",
@@ -100,8 +112,11 @@ const defaultProps = {
 
 const FourSteps = (props) => {
   const classes = useStyles();
+  const theme = useTheme()
+  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
+  
   return (
-    <div className={  `${classes.secondSection} container`} >
+    <Container  className={classes.secondSection} >
 
     <Grid container direction="column" style={{ marginTop: "9em" }}>
       <Grid item container justify="center">
@@ -115,9 +130,9 @@ const FourSteps = (props) => {
           Lorem ipsum dolor sit amet
         </Typography>
       </Grid>
-      <Grid item container justify="" style={{ marginTop: "1em" }}>
+      <Grid item container direction={matchesXS? 'row' : 'row'} justify="center" style={{ marginTop: "1em" }} alignItems='center'>
        
-        <Grid item container direction='column' xs style={{marginLeft: '7em'}}>
+        <Grid item container direction='column' xs style={{}}>
           <Grid container item  justify='center' className={classes.box}>
           <Box borderRadius={10} {...defaultProps} >
               {" "}
@@ -170,7 +185,7 @@ const FourSteps = (props) => {
         </Grid>
         <ArrowRightAltIcon className={classes.arrowIcon} />
 
-        <Grid item container direction='column' xs style={{marginRight: '7em'}}>
+        <Grid item container direction='column' xs style={{}}>
           <Grid container item  justify='center'  className={classes.box}>
           <Box  {...defaultProps} >
               {" "}
@@ -194,7 +209,7 @@ const FourSteps = (props) => {
      
       </Grid>
     </Grid>
-    </div>
+    </Container>
   );
 };
 

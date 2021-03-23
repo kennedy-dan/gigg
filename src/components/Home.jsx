@@ -44,6 +44,13 @@ const useStyles = makeStyles((theme) => ({
     // marginLeft:'1% !important',
     // paddingRight:'1% !important',
   },
+
+  subText2 : {
+    marginBottom: "2em",
+    [theme.breakpoints.down('xs')] : {
+      marginTop: '1em'
+    }
+  },
  
   // caption:{
   //   textAlign:'center',
@@ -71,7 +78,9 @@ const useStyles = makeStyles((theme) => ({
     // marginLeft: "1%",
   },
   firstsec2: {
-    // marginRight: "1%",
+    [theme.breakpoints.down('xs')] : {
+      marginTop: '1em'
+    }
   },
 banner1:{
     maxWidth: "300px",
@@ -90,7 +99,7 @@ banner1:{
     [theme.breakpoints.down("xs")]: {      
       maxWidth:'400px',
       height: '280px',
-      marginBottom: '6em'
+      marginBottom: '7em'
     },
   },
    bg4: {
@@ -217,7 +226,8 @@ const Home = (props) => {
         container 
         direction={matchesXS ? 'column' : 'row'}
         justify={matchesXS ? 'center' : 'space-between'}
-        style={{ marginBottom: "2em" }}
+    
+        className={classes.subText2}
         alignItems= {matchesXS ? 'center': null}
       >
         <Grid item className={classes.firstsec1}>

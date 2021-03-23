@@ -26,6 +26,11 @@ const useStyles = makeStyles((theme) => ({
     // flexGrow: 1,
     ...theme.mixins.toolbar,
   },
+
+  growDrawer: {
+    ...theme.mixins.toolbar,
+    width: 'auto'
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -132,15 +137,15 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "25px",
   },
   drawer: {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.primary.main,
   },
   drawerList: {
-    color: theme.palette.primary.main,
+    color: 'black',
     fontSize: '13px',
-    weight: '10px'
+    fontWeight: '50px'
   },
   drawerRegBtnItem: {
-    backgroundColor: theme.palette.secondary.main
+    color: theme.palette.secondary.main
   }
 }));
 
@@ -149,9 +154,23 @@ export default function Header() {
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-  const [openDrawer, setOpendrawer] = useState(false);
+  const [openDrawer, setOpendrawer] = useState( false);
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
+  
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -212,6 +231,7 @@ export default function Header() {
   const drawer = (
     <React.Fragment>
       <SwipeableDrawer
+      anchor={'top'}
         disableBackdropTransition={!iOS}
         disableDiscovery={iOS}
         open={openDrawer}
@@ -219,7 +239,7 @@ export default function Header() {
         onOpen={() => setOpendrawer(true)}
         classes={{paper: classes.drawer}}
       >
-        <div className={classes.grow} />
+        <div className={classes.growDrawer} />
         <List disablePadding>
           <ListItem divider button onClick={() => setOpendrawer(false)}>
             <ListItemText disableTypography className={classes.drawerList}>Home</ListItemText>
@@ -239,8 +259,8 @@ export default function Header() {
           <ListItem divider button onClick={() => setOpendrawer(false)}>
             <ListItemText disableTypography className={classes.drawerList}>Login</ListItemText>
           </ListItem>
-          <ListItem divider button onClick={() => setOpendrawer(false)} className={classes.drawerRegBtnItem}>
-            <ListItemText disableTypography className={classes.drawerList}>Register</ListItemText>
+          <ListItem divider button onClick={() => setOpendrawer(false)} >
+            <ListItemText disableTypography className={classes.drawerRegBtnItem}>Register</ListItemText>
           </ListItem>
         </List>
         
