@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Grid, Typography, Box,useTheme, useMediaQuery, Container } from "@material-ui/core";
 import { fade, makeStyles } from "@material-ui/core/styles";
-
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
@@ -84,9 +84,21 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')] : {
       marginBottom: '8em'
     },
+    [theme.breakpoints.down('xs')] : {
+      display: 'none'
+    },
     color: "#9cf744",
     // paddingRight: '5px'
     // alignSelf: 'center'
+  },
+  downArrowIcon: {
+    [theme.breakpoints.up('sm')] : {
+      display: 'none'
+    },
+    color: "#9cf744",
+    marginTop:'10px',
+    marginBottom:'10px'
+
   },
   accIcon: {
     margin: "11px",
@@ -133,9 +145,9 @@ const FourSteps = (props) => {
           Lorem ipsum dolor sit amet
         </Typography>
       </Grid>
-      <Grid item container direction={matchesXS? 'row' : 'row'} justify="center" style={{ marginTop: "1em" }} alignItems='center'>
+      <Grid item container direction={matchesXS? 'column' : 'row'} justify="center" style={{ marginTop: "1em" }} alignItems='center'>
        
-        <Grid item container direction='column' xs style={{}}>
+        <Grid item container direction='column' alignItems={matchesXS? 'center' : ''} xs style={{}}>
           <Grid container item  justify='center' className={classes.box}>
           <Box borderRadius={10} {...defaultProps} >
               {" "}
@@ -152,8 +164,9 @@ const FourSteps = (props) => {
         </Grid>
 
         <ArrowRightAltIcon className={classes.arrowIcon} />
+        <ArrowDownwardIcon className={classes.downArrowIcon}/>
 
-        <Grid item container direction='column' xs>
+        <Grid item container direction='column' xs alignItems={matchesXS? 'center' : ''}>
           <Grid container item  justify='center'  className={classes.box}>
           <Box borderRadius={20} {...defaultProps} >
               {" "}
@@ -169,9 +182,9 @@ const FourSteps = (props) => {
           </Grid>
         </Grid>
         <ArrowRightAltIcon className={classes.arrowIcon} />
+        <ArrowDownwardIcon className={classes.downArrowIcon}/>
 
-
-        <Grid item container direction='column' xs>
+        <Grid item container direction='column' xs alignItems={matchesXS? 'center' : ''}>
           <Grid container item  justify='center'  className={classes.box}>
           <Box borderRadius={20} {...defaultProps} >
               {" "}
@@ -187,8 +200,10 @@ const FourSteps = (props) => {
           </Grid>
         </Grid>
         <ArrowRightAltIcon className={classes.arrowIcon} />
+        <ArrowDownwardIcon className={classes.downArrowIcon}/>
 
-        <Grid item container direction='column' xs style={{}}>
+
+        <Grid item container direction='column' xs style={{}} alignItems={matchesXS? 'center' : ''}>
           <Grid container item  justify='center'  className={classes.box}>
           <Box  {...defaultProps} >
               {" "}

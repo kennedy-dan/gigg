@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
 
         },
         [theme.breakpoints.down("xs")]: {      
-          maxWidth:'350px',
+          maxWidth:'332px',
           height: '280px',
           marginBottom: '6em'
         },

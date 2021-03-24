@@ -350,7 +350,7 @@ const Home = (props) => {
 
      
 
-      {/* <FourSteps /> */}
+      <FourSteps />
       <SecondSection />
     </Grid>
   );

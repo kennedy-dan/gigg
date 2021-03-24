@@ -71,6 +71,11 @@ const useStyles = makeStyles((theme) => ({
       width: "90%",
     },
   },
+  cardGrid: {
+    // marginTop: "0.9em", marginBottom: "0.5em"
+    paddingTop: '1em',
+    paddingBottom:'1em'
+  },
   ImageText: {
     position: "absolute",
     marginTop: "4em",
@@ -88,7 +93,7 @@ const FirstBaground = (props) => {
   return (
     <Grid container className={classes.bg}>
       <Grid container className={classes.cont}>
-        {/* <Header /> */}
+        <Header />
         <Grid item container style={{}} className={classes.ImageText}>
           <Grid justify="center" container className={classes.header}>
             <Grid item container justify="center">
@@ -114,7 +119,8 @@ const FirstBaground = (props) => {
                 direction
                 container
                 justify="space-evenly"
-                style={{ marginTop: "0.9em", marginBottom: "0.5em" }}
+                className={classes.cardGrid}
+                style={{  }}
               >
                 <Grid item className={classes.cardItem}>
                   <Typography className={classes.typo}>
