@@ -4,6 +4,8 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
+
+import ClearIcon from '@material-ui/icons/Clear';
 import InputBase from "@material-ui/core/InputBase";
 import Badge from "@material-ui/core/Badge";
 import {
@@ -76,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.standard,
     }),
     padding: "0 20px",
-    zIndex: theme.zIndex.modal + 1
+    // zIndex: theme.zIndex.modal + 1
   },
   appBarScrolled: {
     backgroundColor: "#FFFFFF",
@@ -152,6 +154,10 @@ const useStyles = makeStyles((theme) => ({
   drawerRegBtnItem: {
     color: theme.palette.primary.main,
     fontSize: '17px',
+  },
+  cancelIcon : {
+    fontSize: '30px',
+    marginRight: '15px'
   }
 }));
 
@@ -246,6 +252,10 @@ export default function Header() {
         classes={{paper: classes.drawer}}
       >
         <div className={classes.growDrawer} />
+        <Grid container direction='column'>
+          <Grid container justify='flex-end'>
+            <ClearIcon className={classes.cancelIcon} onClick={() => setOpendrawer(false)}/>
+          </Grid>
         <Grid container justify='center'>
         <List disablePadding justify='center'>
           <ListItem  button onClick={() => setOpendrawer(false)} className={classes.mainListIttem}>
@@ -270,6 +280,7 @@ export default function Header() {
             <ListItemText disableTypography className={classes.drawerRegBtnItem}>Register</ListItemText>
           </ListItem>
         </List>
+        </Grid>
         </Grid>
         
       </SwipeableDrawer>

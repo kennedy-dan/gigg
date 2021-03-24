@@ -79,13 +79,15 @@ const useStyles = makeStyles((theme) => ({
       },
       cont: {
         [theme.breakpoints.down("sm")]: {
-          height: "15em",
+          height: "100% !important",
+
         },
-        height: "20.5em",
+        height: "100% ",
+
         maxWidth: "100%",
-        color: 'transparent',
+        // color: 'transparent',
         // backgroundColor: theme.palette.tertiary.main,
-    
+        color: 'transparent',
         "&:hover": {
           color:'white',
           // transform: scale()
@@ -110,14 +112,14 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '24px'
       },
      hoverTypo: {
-       marginTop: '100px',
-       marginLeft: '80px',
-       fontSize: '14px'
+    
+       fontSize: '16px'
      },
      caption: {
       textAlign:'center',
       width:'80%',
-      paddingTop:'65px',
+      // marginTop:'-95px',
+      alignSelf: 'center',
       
       "& h6": {
         fontWeight:'bolder',
@@ -127,7 +129,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight:'lighter',
       },
       [theme.breakpoints.up('md')] : {
-        paddingTop: '125px'
+        // paddingTop: '125px'
       }
     },
      subText:{
@@ -190,12 +192,12 @@ const SecondSection = (props) => {
       </Grid>
       </Grid>
     <Grid container direction={matchesXS ? 'column' : 'row'} alignItems= {matchesXS ? 'center': null}  justify={matchesXS? 'center':'space-between'} style={{marginBottom: '5em',padding:'0 !important'}}>
-    <Grid item   >
+    <Grid item  >
           <Grid item container justify="center" className={  `${classes.banner1} ${classes.bg}`} >
             <Grid container item className={classes.cont}>
-              <div style={{position: 'absolute'}} className={classes.hiddenTypo}>
-                <Typography className={classes.hoverTypo}>Accomodation</Typography>
-              </div>
+              <Grid container justify='center' alignItems='center'>
+                <Typography >Accomodation</Typography>
+              </Grid>
             </Grid>
             <div className={classes.caption}  >
             <h6>Meeting room</h6>
@@ -203,14 +205,15 @@ const SecondSection = (props) => {
                Ad, illum minima</p>
           </div>
           </Grid>
+          
         </Grid>
 
-        <Grid item   >
+        <Grid item  >
           <Grid item container justify="center" className={  `${classes.banner1} ${classes.bg}`} >
             <Grid container item className={classes.cont}>
-              <div style={{position: 'absolute'}} className={classes.hiddenTypo}>
-                <Typography className={classes.hoverTypo}>Accomodation</Typography>
-              </div>
+            <Grid container justify='center' alignItems='center'>
+                <Typography >Accomodation</Typography>
+              </Grid>
             </Grid>
             <div className={classes.caption}  >
             <h6>Meeting room</h6>
@@ -223,9 +226,9 @@ const SecondSection = (props) => {
         <Grid item   >
           <Grid item container justify="center" className={  `${classes.banner1} ${classes.bg3}`} >
             <Grid container item className={classes.cont}>
-              <div style={{position: 'absolute'}} className={classes.hiddenTypo}>
+             <Grid container justify='center' alignItems='center'>
                 <Typography className={classes.hoverTypo}>Accomodation</Typography>
-              </div>
+              </Grid>
             </Grid>
             <div className={classes.caption}  >
             <h6>Meeting room</h6>

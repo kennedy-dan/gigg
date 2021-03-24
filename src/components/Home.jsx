@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       backgroundColor: theme.palette.tertiary.main,
          "& div" : {
-        display:'inline'
+        display:'flex'
       }
     },
     // opacity: '0.5px'
@@ -171,18 +171,15 @@ banner1:{
     marginTop: '8px'
   },
  hiddenTypo: {
-  //  marginTop: '10em',
-  //  marginLeft: '80px',
-  //  fontSize: '15px',
    color: theme.palette.primary.main,
    alignItems:'center'
-
  },
  hoverTypo: {
   alignItems:'center',
   fontSize:'18px',
-  marginTop:'8em',
-  marginLeft: '4.8em'
+  // marginTop:'8em',
+  color: theme.palette.primary.main,
+  // marginLeft: '4.8em'
  }
 }));
 
@@ -269,12 +266,44 @@ const Home = (props) => {
         alignItems= {matchesXS ? 'center': null}
       
       style={{padding:'0 !important'}} className={classes.galleryGrid}>
-        <Grid item   >
+        {/* <Grid item   >
           <Grid item container justify="center" className={  `${classes.banner1} ${classes.bg}`} >
             <Grid container item className={classes.cont}>
-              <div style={{position: 'absolute'}} className={classes.hiddenTypo}>
+              <Grid container justify='center'>
+                <Typography >Accomodation</Typography>
+              </Grid>
+            </Grid>
+            <div className={classes.caption}  >
+            <h6>Meeting room</h6>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+               Ad, illum minima</p>
+          </div>
+          </Grid>
+        </Grid> */}
+
+
+<Grid item   >
+          <Grid item container justify="center" className={  `${classes.banner1} ${classes.bg}`} >
+            <Grid container item className={classes.cont}>
+              <Grid container justify='center' alignItems='center'>
                 <Typography className={classes.hoverTypo}>Accomodation</Typography>
-              </div>
+              </Grid>
+            </Grid>
+            <div className={classes.caption}  >
+            <h6>Meeting room</h6>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+               Ad, illum minima</p>
+          </div>
+          </Grid>
+        </Grid>
+
+        
+        <Grid item   >
+          <Grid item container justify="center" className={  `${classes.banner1} ${classes.bg1}`} >
+            <Grid container item className={classes.cont}>
+              <Grid container justify='center' alignItems='center'>
+                <Typography className={classes.hoverTypo}>Accomodation</Typography>
+              </Grid>
             </Grid>
             <div className={classes.caption}  >
             <h6>Meeting room</h6>
@@ -285,48 +314,28 @@ const Home = (props) => {
         </Grid>
 
 
-
-        
-        <Grid item  direction="column" style={{  }}>
-          <Grid item container justify="center" className={  `${classes.banner1} ${classes.bg1}`} >
-          <Grid container item className={classes.cont}>
-          <div style={{position: 'absolute'}} className={classes.hiddenTypo}>
-                <Typography className={classes.hoverTypo}>Accomodation</Typography>
-              </div>
-          </Grid>
-          <div className={classes.caption}  >
-            <h6>Meeting room</h6>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Ad, illum minima</p>
-          </div>
-          </Grid>
-        </Grid>
-
-
-        <Grid item direction="column" style={{  }} >
+        <Grid item   >
           <Grid item container justify="center" className={  `${classes.banner1} ${classes.bg3}`} >
-          <Grid container item className={classes.cont}>
-          <div style={{position: 'absolute'}} className={classes.hiddenTypo}>
+            <Grid container item className={classes.cont}>
+              <Grid container justify='center' alignItems='center'>
                 <Typography className={classes.hoverTypo}>Accomodation</Typography>
-              </div>
-          </Grid>
-
-          <div className={classes.caption}  >
+              </Grid>
+            </Grid>
+            <div className={classes.caption}  >
             <h6>Meeting room</h6>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                Ad, illum minima</p>
           </div>
           </Grid>
-
         </Grid>
-        <Grid item direction="column" style={{ }} >
-          <Grid item container justify="center"  className={  `${classes.banner1} ${classes.bg4}`}  >
-          <Grid container item className={classes.cont}>
-          <div style={{position: 'absolute'}} className={classes.hiddenTypo}>
+        <Grid item   >
+          <Grid item container justify="center" className={  `${classes.banner1} ${classes.bg4}`} >
+            <Grid container item className={classes.cont}>
+              <Grid container justify='center' alignItems='center'>
                 <Typography className={classes.hoverTypo}>Accomodation</Typography>
-              </div>
-          </Grid>
-          <div className={classes.caption}  >
+              </Grid>
+            </Grid>
+            <div className={classes.caption}  >
             <h6>Meeting room</h6>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                Ad, illum minima</p>
