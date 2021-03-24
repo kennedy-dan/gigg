@@ -77,18 +77,15 @@ const useStyles = makeStyles((theme) => ({
     height: "100% !important",
     maxWidth: "100%",
     transition: '0.3s',
-    // color: 'red',
-    // display: 'none'
-    "& div " : {
-      "& Typography" : {
-        display:'none'
-      }
+    "& div" : {
+      display:'none'
     },
+
     "&:hover": {
       backgroundColor: theme.palette.tertiary.main,
-     
-      // transform: 'translate(50%)',
-      // display: 'inline !important'
+         "& div" : {
+        display:'inline'
+      }
     },
     // opacity: '0.5px'
   },
@@ -174,13 +171,18 @@ banner1:{
     marginTop: '8px'
   },
  hiddenTypo: {
-   marginTop: '10em',
-   marginLeft: '80px',
-   fontSize: '13px',
-  //  color:'red',
-   "&:hover": {
-    //  display: 'inline-block'
-   }
+  //  marginTop: '10em',
+  //  marginLeft: '80px',
+  //  fontSize: '15px',
+   color: theme.palette.primary.main,
+   alignItems:'center'
+
+ },
+ hoverTypo: {
+  alignItems:'center',
+  fontSize:'18px',
+  marginTop:'8em',
+  marginLeft: '4.8em'
  }
 }));
 
@@ -330,17 +332,6 @@ const Home = (props) => {
                Ad, illum minima</p>
           </div>
           </Grid>
-          {/* <Grid item container direction="column" alignItems="center" className={classes.typeCont}>
-            <Typography className={classes.typoTypes}>
-              <b>Meeting room</b>
-            </Typography>
-            <Typography className={classes.typoTypes}>
-              Lorem ipsum dolor sit amet,
-            </Typography>
-            <Typography className={classes.typoTypes}>
-              Lorem ipsum dolor ,
-            </Typography>
-          </Grid> */}
         </Grid>
       </Grid>
       

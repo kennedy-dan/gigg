@@ -137,19 +137,21 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "25px",
   },
   drawer: {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.secondary.main,
     height: '100%'
   },
   drawerList: {
-    color: 'black',
+    // color: 'black',
     fontSize: '17px',
     fontWeight: '50px',
-    marginLeft: '5px'
+    color: theme.palette.primary.main
+  },
+  mainListIttem: {
+    marginTop: '2em'
   },
   drawerRegBtnItem: {
-    color: theme.palette.secondary.main,
+    color: theme.palette.primary.main,
     fontSize: '17px',
-    marginLeft: '5px'
   }
 }));
 
@@ -244,8 +246,9 @@ export default function Header() {
         classes={{paper: classes.drawer}}
       >
         <div className={classes.growDrawer} />
-        <List disablePadding>
-          <ListItem  button onClick={() => setOpendrawer(false)}>
+        <Grid container justify='center'>
+        <List disablePadding justify='center'>
+          <ListItem  button onClick={() => setOpendrawer(false)} className={classes.mainListIttem}>
             <ListItemText disableTypography className={classes.drawerList}>Home</ListItemText>
           </ListItem>
           <ListItem  button onClick={() => setOpendrawer(false)}>
@@ -263,10 +266,11 @@ export default function Header() {
           <ListItem  button onClick={() => setOpendrawer(false)}>
             <ListItemText disableTypography className={classes.drawerList}>Login</ListItemText>
           </ListItem>
-          <ListItem  button onClick={() => setOpendrawer(false)} >
+          <ListItem  button onClick={() => setOpendrawer(false)} style={{alignSelf: 'center'}} >
             <ListItemText disableTypography className={classes.drawerRegBtnItem}>Register</ListItemText>
           </ListItem>
         </List>
+        </Grid>
         
       </SwipeableDrawer>
 

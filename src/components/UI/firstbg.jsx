@@ -37,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
   },
   typo: {
     fontSize: "11px",
+    [theme.breakpoints.down('xs')] : {
+      fontSize: '9px'
+    },
     marginTop: "",
   },
   cardBtn: {
