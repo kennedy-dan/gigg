@@ -74,7 +74,11 @@ const useStyles = makeStyles((theme) => ({
   cardGrid: {
     // marginTop: "0.9em", marginBottom: "0.5em"
     paddingTop: '1em',
-    paddingBottom:'1em'
+    paddingBottom:'1em',
+    [theme.breakpoints.down('xs')] :{
+      paddingLeft: '1em',
+      paddingRight: '1em' 
+    }
   },
   ImageText: {
     position: "absolute",
