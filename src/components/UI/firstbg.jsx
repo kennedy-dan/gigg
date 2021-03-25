@@ -11,7 +11,7 @@ import Header from "./Header";
 const useStyles = makeStyles((theme) => ({
   bg: {
     backgroundImage: `url(${firstbg})`,
-    height: "100%",
+    height: "100vh",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -22,14 +22,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       height: "45em",
     },
-    height: "38em",
+    height: "100vh",
     maxWidth: "100%",
     backgroundColor: theme.palette.tertiary.main,
     // opacity: '0.5px'
   },
   header: {
     marginBottom: "1em",
-    marginTop: "5em",
+    // marginTop: "5em",
     color: "white",
   },
   cardItem: {
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   mainText: {
-    fontSize: "2.6em",
+    fontSize: "2.9em",
     [theme.breakpoints.down("xs")]: {
       fontSize: "1.6em",
     },
@@ -84,8 +84,8 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   ImageText: {
-    position: "absolute",
-    marginTop: "4em",
+    // position: "absolute",
+    // marginTop: "4em",
     [theme.breakpoints.down('xs')]: {
       marginTop:'9em'
     },
@@ -101,9 +101,9 @@ const FirstBaground = (props) => {
     <Grid container className={classes.bg}>
       <Grid container className={classes.cont}>
         <Header />
-        <Grid item container style={{}} className={classes.ImageText}>
-          <Grid justify="center" container className={classes.header}>
-            <Grid item container justify="center">
+        <Grid item container direction='column' justify='center' style={{}}  className={classes.ImageText} >
+          <Grid justify="center" container className={classes.header} >
+            <Grid item container justify="center" alignItems='center'>
               <Typography style={{}} className={classes.mainText}>
                 Find A work Space That Makes
               </Typography>

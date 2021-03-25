@@ -208,7 +208,7 @@ const Home = (props) => {
 
   
   return (
-    <Grid container direction="column">
+    <Grid container direction="column" >
       <Grid item>
         <FirstBaground />
       </Grid>
