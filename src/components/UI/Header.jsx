@@ -146,7 +146,8 @@ const useStyles = makeStyles((theme) => ({
     // color: 'black',
     fontSize: '17px',
     fontWeight: '50px',
-    color: theme.palette.primary.main
+    color: theme.palette.primary.main,
+    textAlign:'center'
   },
   mainListIttem: {
     marginTop: '2em'
@@ -157,7 +158,9 @@ const useStyles = makeStyles((theme) => ({
   },
   cancelIcon : {
     fontSize: '30px',
-    marginRight: '15px'
+    marginRight: '15px',
+    color: theme.palette.primary.main,
+
   }
 }));
 

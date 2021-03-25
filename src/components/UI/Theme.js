@@ -2,6 +2,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 const blueTheme = '#197519'
 const whiteTheme = '#FFFFFF'
+const darkWhite ='#afafaf'
 
 export default createMuiTheme ({
     palette: {
@@ -17,6 +18,9 @@ export default createMuiTheme ({
         },
         tertiary: {
          main: 'rgba(0,0,0,0.4)'
+        },
+        advance: {
+            main: `${darkWhite}`
         }
     },
     typography: {

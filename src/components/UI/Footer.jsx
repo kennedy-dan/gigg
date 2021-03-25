@@ -1,5 +1,12 @@
 import React from "react";
-import { Grid, Typography, Box, Container, useTheme, useMediaQuery } from "@material-ui/core";
+import {
+  Grid,
+  Typography,
+  Box,
+  Container,
+  useTheme,
+  useMediaQuery,
+} from "@material-ui/core";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -11,79 +18,82 @@ import { fade, makeStyles } from "@material-ui/core/styles";
  **/
 
 const useStyles = makeStyles((theme) => ({
-    secondSection:{
-        // marginTop:'150px',
-        [theme.breakpoints.down('sm')]: {
-          maxWidth: '750px'
-        },
-        [theme.breakpoints.up('md')]: {
-          maxWidth: '960px'
-        },
-        [theme.breakpoints.up('lg')]: {
-          maxWidth: '1280px'
-        },
-      },
+  secondSection: {
+    // marginTop:'150px',
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "750px",
+    },
+    [theme.breakpoints.up("md")]: {
+      maxWidth: "960px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: "1280px",
+    },
+  },
   icons: {
     fontSize: "25px",
-    margin: "6px",
-    color: theme.palette.secondary.main,
+    // margin: "6px",
+    color: theme.palette.primary.main,
+  },
+  iconsCont:{
+    marginTop: '24px',
+    [theme.breakpoints.down("xs")]: {
+      textAlign:'center'
+      // marginTop: "3em",
+    },
   },
   mainContainer: {
     marginTop: "4em",
     backgroundColor: theme.palette.secondary.main,
   },
-  secCont: {
-    marginTop: "5em",
-    marginBottom: "5em",
-  },
 
-  firstGrid: {
-    textAlign: "center",
-  },
-  typo: {
-    fontSize: "13px",
-    marginBottom: "4px",
-  },
-
-  firstTypo: {
+  firstTypo2: {
     marginBottom: "1em",
     color: theme.palette.primary.main,
     fontWeight: "10px",
     fontSize: "24px",
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "3em",
+    },
   },
-  firstTypo2 :{
-    marginBottom: "1em",
+  firstText: {
     color: theme.palette.primary.main,
-    fontWeight: "10px",
-    fontSize: "24px",
-    [theme.breakpoints.down('xs')]: {
-        marginTop: '3em',
-        
-    }
+    fontSize: '20px',
+    marginTop:'50px',
+    [theme.breakpoints.down("xs")]: {
+      textAlign:'center'
+      // marginTop: "3em",
+    },
   },
-  lastTypo: {
-    color: theme.palette.primary.main,
-    fontWeight: "10px",
+  subTextCont:{
+    marginTop: '30px',
+    color: theme.palette.advance.main,
 
   },
-  thirdGrid : {
-    [theme.breakpoints.down('xs')]: {
-        marginTop: '3em',
-        
-    }
-  },
-  secondTypo: {
+  otherHeadText:{
+    marginTop:'50px',
     color: theme.palette.primary.main,
-    fontSize: "12px",
+    fontSize:'13px',
+    fontWeight: '90px',
+    [theme.breakpoints.down("xs")]: {
+      textAlign:'center'
+      // marginTop: "3em",
+    },
+
   },
-  boxContainer: {
-    marginTop: "1em",
+  prodTypo:{
+    color: theme.palette.advance.main,
+    marginTop:'9px',
+    [theme.breakpoints.down("xs")]: {
+      textAlign:'center'
+      // marginTop: "3em",
+    },
+    // marginBottom: '8px'
   },
-  lastGrid : {
-    [theme.breakpoints.down('xs')]: {
-        marginBottom: '2em',
-        
-    }
+
+  firstSubtext: {
+    // marginTop:'30px',
+    // color:theme.palette.primary.main
   }
 }));
 const defaultProps = {
@@ -96,91 +106,67 @@ const defaultProps = {
 
 const Footer = (props) => {
   const classes = useStyles();
-  const theme = useTheme()
+  const theme = useTheme();
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
-    <Grid container direction="column" className={classes.mainContainer}>
+    <Grid container direction="row" className={classes.mainContainer}>
       <Container className={classes.secondSection}>
-        <Grid item container direction={matchesXS ? 'column' : 'row'} className={classes.secCont}>
-          <Grid
-            item
-            container
-            alignItems="center"
-            direction="column"
-            xs
-            className={classes.firstGrid}
-          >
-            <Typography variant="h4" className={classes.firstTypo}>
-              About us
-            </Typography>
-            <Typography className={classes.secondTypo}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem nihil minima quae reiciendis consectetur nulla
-              itaque perspiciatis vitae odio mollitia, consequuntur et placeat
-              debitis ex, inventore dicta velit unde deleniti?
-            </Typography>
-            <Box
-              display="flex"
-              justifyContent="center"
-              className={classes.boxContainer}
-            >
-              <Box borderRadius="50%" {...defaultProps}>
-                <FacebookIcon className={classes.icons} />
-              </Box>
-              <Box borderRadius="50%" {...defaultProps}>
-                <TwitterIcon className={classes.icons} />
-              </Box>
-              <Box borderRadius={20} {...defaultProps}>
-                <InstagramIcon className={classes.icons} />
-              </Box>
-            </Box>
-          </Grid>
-
-          <Grid item xs container justify="center">
-            <Typography variant="h4" className={classes.firstTypo2}>
-              Categories/Tags
-            </Typography>
-          </Grid>
-
-          <Grid
-            item
-            container
-            direction="column"
-            xs
-            style={{ textAlign: "center" }}
-            className={classes.thirdGrid}
-            alignItems="center"
-          >
-            <Typography variant="h4" className={classes.firstTypo}>
-              Have Questions
-            </Typography>
-            <Typography className={classes.secondTypo}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem nihil minima quae reiciendis consectetur nulla
-              itaque perspiciatis vitae odio mollitia, consequuntur et placeat
-              debitis ex, inventore dicta velit unde deleniti?
-            </Typography>
-            <Box display="flex" justifyContent="center">
-              <Box borderRadius="50%" {...defaultProps}>
-                <FacebookIcon className={classes.icons} />
-              </Box>
-              <Box borderRadius="50%" {...defaultProps}>
-                <TwitterIcon className={classes.icons} />
-              </Box>
-              <Box borderRadius={20} {...defaultProps}>
-                <InstagramIcon className={classes.icons} />
-              </Box>
-            </Box>
-          </Grid>
+        <Grid item  direction={matchesXS? 'column' : 'row'} container justify='space-between' alignItems={matchesXS? 'center' :''}>
+        <Grid item >
+          <Typography variant="h6" className={classes.firstText}>Neeeo</Typography>
+          <div className={classes.subTextCont}>
+          <Typography textAlign='center' className={classes.firstSubtext} style={{paddingBottom:'7px'}}>
+            Lorem ipsum dolor sit amet consectetur 
+          </Typography>
+          <Typography textAlign='center' style={{paddingBottom:'7px'}}>
+            Lorem ipsum dolor sit amet consectetur 
+          </Typography>
+          </div>
         </Grid>
-        <Grid item container direction='column' alignItems="center" className={classes.lastGrid}>
-          <Typography variant="h4" className={classes.lastTypo}>
-            Lorem ipsum
-          </Typography>
-          <Typography className={classes.secondTypo}>
-            Lorem, ipsum dolor sit amet 
-          </Typography>
+        <Grid direction="column">
+        <Typography className={classes.otherHeadText}>Products</Typography>
+        <div className={classes.prodTypo}>
+
+          <Typography style={{paddingBottom:'7px'}}>Products</Typography>
+          <Typography style={{paddingBottom:'7px'}}>Pricing</Typography>
+          <Typography style={{paddingBottom:'7px'}}>Log in</Typography>
+          <Typography style={{paddingBottom:'7px'}}>Partnership</Typography>
+          </div>
+        </Grid>
+        <Grid direction="column">
+        <Typography className={classes.otherHeadText}>About us</Typography>
+        <div className={classes.prodTypo}>
+
+          <Typography style={{paddingBottom:'7px'}}>About Neeo</Typography>
+          <Typography style={{paddingBottom:'7px'}}>Contact us</Typography>
+          <Typography style={{paddingBottom:'7px'}}>Features</Typography>
+          <Typography style={{paddingBottom:'7px'}}>Carriers</Typography>
+          </div>
+        </Grid>
+        <Grid direction="column">
+        <Typography className={classes.otherHeadText}>Resources</Typography>
+        <div className={classes.prodTypo}>
+
+          <Typography style={{paddingBottom:'7px'}}>Help center</Typography>
+          <Typography style={{paddingBottom:'7px'}}>Book a demo</Typography>
+          <Typography style={{paddingBottom:'7px'}}>Server status</Typography>
+          </div>
+        </Grid>
+        <Grid direction="column">
+        <Typography className={classes.otherHeadText}>Get in Touch</Typography>
+        <div className={classes.prodTypo}>
+        
+          <Typography style={{paddingBottom:'7px'}}>Lorem ipsum, dolor sit amet </Typography>
+          <Typography style={{paddingBottom:'7px'}}>Lorem ipsum, dolor sit amet consectetur</Typography>
+          </div>
+          <div className={classes.iconsCont}> 
+          <FacebookIcon className={classes.icons}/>
+          <InstagramIcon className={classes.icons}/>
+          <TwitterIcon className={classes.icons}/>
+        </div>
+        </Grid>
+        
         </Grid>
       </Container>
     </Grid>
@@ -188,3 +174,4 @@ const Footer = (props) => {
 };
 
 export default Footer;
+// Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis voluptates vero, quos rem accusamus laudantium. Cumque expedita, aliquid quod molestias, repudiandae voluptas blanditiis, veritatis praesentium tempore asperiores fuga dolor hic?

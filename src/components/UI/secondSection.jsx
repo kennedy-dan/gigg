@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '1em'
       }
       },
+      firstText:{
+        marginBottom:'15px'
+      },
+    
       firstsec2: {
         [theme.breakpoints.down('xs')] : {
           marginTop: '1em'
@@ -155,7 +159,7 @@ const SecondSection = (props) => {
     <Container className={classes.secondSection} >
   
   <Grid item container justify={matchesXS ? 'center': 'inherit'}  className={  classes.subText} >
-  <Typography >
+  <Typography  className={classes.firstText}>
           <Typography variant={matchesSM ? 'h4': 'h3'}><b>Types of <span style={{ color: "#9cf744" }}> Work </span>
           Space Available </b></Typography>
         </Typography>

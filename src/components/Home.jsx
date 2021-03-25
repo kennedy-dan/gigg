@@ -91,7 +91,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
  
-
+  firstText:{
+    marginBottom:'15px'
+  },
 
   firstsec1: {
     // marginLeft: "1%",
@@ -220,7 +222,7 @@ const Home = (props) => {
 
 
       <Grid item container justify={matchesXS ? 'center': 'inherit'}  className={  classes.subText} >
-        <Typography >
+        <Typography className={classes.firstText}>
           <Typography variant={matchesSM ? 'h4': 'h3'}><b>Types of <span style={{ color: "#9cf744" }}> Work </span>
           Space Available </b></Typography>
         </Typography>
@@ -266,20 +268,7 @@ const Home = (props) => {
         alignItems= {matchesXS ? 'center': null}
       
       style={{padding:'0 !important'}} className={classes.galleryGrid}>
-        {/* <Grid item   >
-          <Grid item container justify="center" className={  `${classes.banner1} ${classes.bg}`} >
-            <Grid container item className={classes.cont}>
-              <Grid container justify='center'>
-                <Typography >Accomodation</Typography>
-              </Grid>
-            </Grid>
-            <div className={classes.caption}  >
-            <h6>Meeting room</h6>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-               Ad, illum minima</p>
-          </div>
-          </Grid>
-        </Grid> */}
+    
 
 
 <Grid item   >

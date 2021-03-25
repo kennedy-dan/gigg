@@ -63,6 +63,10 @@ const useStyles = makeStyles((theme) => ({
       fontWeight:'lighter',
     }
   },
+
+  mainText: {
+    fontSize:'19px'
+  },
   box: {
     width: '80%'
   },
@@ -74,15 +78,25 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "13px",
     textAlign: 'center',
     marginTop: "0.5em",
-    width: '80%'
+    width: '80%',
+    "& h6": {
+      fontWeight:'bolder',
+    },
+    "& p": {
+      marginTop:'-5px',
+      fontWeight:'lighter',
+    }
   },
   arrowIcon: {
     // marginTop: "1.5em",
     // marginLeft: "-1.5em",
+    fontSize: '25px',
     marginRight: "1.5em",
     marginBottom: '4em',
     [theme.breakpoints.down('sm')] : {
-      marginBottom: '8em'
+      marginBottom: '6em',
+    marginRight: "1.1em",
+
     },
     [theme.breakpoints.down('xs')] : {
       display: 'none'
@@ -97,7 +111,8 @@ const useStyles = makeStyles((theme) => ({
     },
     color: "#9cf744",
     marginTop:'10px',
-    marginBottom:'10px'
+    marginBottom:'10px',
+    fontSize:'25px'
 
   },
   accIcon: {
@@ -108,7 +123,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.secondary.main,
   },
   secondTypo: {
-    fontSize: "11px",
+    fontSize: "12px",
     marginTop: "8px",
   },
 }));
@@ -135,7 +150,7 @@ const FourSteps = (props) => {
 
     <Grid container direction="column" style={{ marginTop: "9em" }}>
       <Grid item container justify="center">
-        <Typography variant="h5">
+        <Typography variant="h5" className={classes.mainText}>
           <b>4 easy</b> <span style={{ color: "#9cf744" }}>steps</span>{" "}
           <b>to book</b>
         </Typography>
@@ -155,11 +170,11 @@ const FourSteps = (props) => {
             </Box>
           </Grid>
           <Grid container item className={classes.fontSize} justify='center'>
-            <Typography >Meeting</Typography>
-            <Typography>
+            <h6 >Meeting</h6>
+            <p>
             Lorem ipsum, dolor sit amet consectetur earum
               dignissimos deleniti eum assumenda.
-            </Typography>
+            </p>
           </Grid>
         </Grid>
 
@@ -174,11 +189,11 @@ const FourSteps = (props) => {
             </Box>
           </Grid>
           <Grid container item className={classes.fontSize} justify='center'>
-            <Typography >Meeting</Typography>
-            <Typography>
+            <h6 >Meeting</h6>
+            <p>
             Lorem ipsum, dolor sit amet consectetur earum
               dignissimos deleniti eum assumenda.
-            </Typography>
+            </p>
           </Grid>
         </Grid>
         <ArrowRightAltIcon className={classes.arrowIcon} />
@@ -192,11 +207,11 @@ const FourSteps = (props) => {
             </Box>
           </Grid>
           <Grid container item style={{ marginTop: "0.5em" }} className={classes.fontSize}  justify='center'>
-            <Typography >Meeting</Typography>
-            <Typography>
+            <h6 >Meeting</h6>
+            <p>
             Lorem ipsum, dolor sit amet consectetur earum
               dignissimos deleniti eum assumenda.
-            </Typography>
+            </p>
           </Grid>
         </Grid>
         <ArrowRightAltIcon className={classes.arrowIcon} />
@@ -211,12 +226,12 @@ const FourSteps = (props) => {
             </Box>
           </Grid>
           <Grid container item style={{ marginTop: "0.5em" }} justify='center' className={classes.fontSize} >
-            <Typography >Meeting</Typography>
-            <Typography>
+            <h6 >Meeting</h6>
+            <p>
             Lorem ipsum, dolor sit amet consectetur earum
               dignissimos deleniti eum assumenda.
               
-            </Typography>
+            </p>
           </Grid>
         </Grid>
 
