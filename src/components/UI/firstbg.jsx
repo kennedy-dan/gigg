@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cont: {
     [theme.breakpoints.down("sm")]: {
-      height: "45em",
+      height: "100vh",
     },
     height: "100vh",
     maxWidth: "100%",
@@ -53,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mainText: {
     fontSize: "2.9em",
+    fontWeight: '3em',
     [theme.breakpoints.down("xs")]: {
       fontSize: "1.6em",
     },
@@ -87,10 +88,10 @@ const useStyles = makeStyles((theme) => ({
     // position: "absolute",
     // marginTop: "4em",
     [theme.breakpoints.down('xs')]: {
-      marginTop:'9em'
+      // marginTop:'9em'
     },
     [theme.breakpoints.down('sm')]: {
-      marginTop:'7em'
+      // marginTop:'7em'
     }
   },
 }));
