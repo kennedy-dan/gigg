@@ -115,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 9000,
     color: theme.palette.primary.main,
     // color: "white",
-    fontSize: "12px",
+    fontSize: "14px",
   },
   tabScrolled: {
     marginLeft: "25px",
@@ -124,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 9000,
     // color: theme.palette.primary.main,
     color: "black",
-    fontSize: "12px",
+    fontSize: "14px",
   },
   btn: {
     fontSize: "13px",

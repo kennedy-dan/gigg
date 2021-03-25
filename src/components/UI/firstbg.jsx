@@ -52,14 +52,17 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   mainText: {
-    fontSize: "2.9em",
+    fontSize: "3.5em",
     fontWeight: '3em',
+    [theme.breakpoints.down('sm')]: {
+      fontSize:'2.6em'
+    },
     [theme.breakpoints.down("xs")]: {
       fontSize: "1.6em",
     },
   },
   subTypo: {
-    fontSize: "0.9em",
+    fontSize: "1.1em",
     textAlign: "center",
     width: "40%",
     [theme.breakpoints.down("sm")]: {
@@ -70,7 +73,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   card: {
-    width: "40em",
+    width: "50em",
+    [theme.breakpoints.down('sm')]: {
+      width:'38em'
+    },
     [theme.breakpoints.down("xs")]: {
       width: "90%",
     },
