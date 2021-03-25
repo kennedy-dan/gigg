@@ -35,10 +35,10 @@ const useStyles = makeStyles((theme) => ({
     // margin: "6px",
     color: theme.palette.primary.main,
   },
-  iconsCont:{
-    marginTop: '24px',
+  iconsCont: {
+    marginTop: "24px",
     [theme.breakpoints.down("xs")]: {
-      textAlign:'center'
+      textAlign: "center",
       // marginTop: "3em",
     },
   },
@@ -58,34 +58,32 @@ const useStyles = makeStyles((theme) => ({
   },
   firstText: {
     color: theme.palette.primary.main,
-    fontSize: '20px',
-    marginTop:'50px',
+    fontSize: "20px",
+    marginTop: "50px",
     [theme.breakpoints.down("xs")]: {
-      textAlign:'center'
+      textAlign: "center",
       // marginTop: "3em",
     },
   },
-  subTextCont:{
-    marginTop: '30px',
+  subTextCont: {
+    marginTop: "30px",
     color: theme.palette.advance.main,
-
   },
-  otherHeadText:{
-    marginTop:'50px',
+  otherHeadText: {
+    marginTop: "50px",
     color: theme.palette.primary.main,
-    fontSize:'13px',
-    fontWeight: '90px',
+    fontSize: "13px",
+    fontWeight: "90px",
     [theme.breakpoints.down("xs")]: {
-      textAlign:'center'
+      textAlign: "center",
       // marginTop: "3em",
     },
-
   },
-  prodTypo:{
+  prodTypo: {
     color: theme.palette.advance.main,
-    marginTop:'9px',
+    marginTop: "9px",
     [theme.breakpoints.down("xs")]: {
-      textAlign:'center'
+      textAlign: "center",
       // marginTop: "3em",
     },
     // marginBottom: '8px'
@@ -94,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
   firstSubtext: {
     // marginTop:'30px',
     // color:theme.palette.primary.main
-  }
+  },
 }));
 const defaultProps = {
   bgcolor: "#98dbf3",
@@ -112,61 +110,87 @@ const Footer = (props) => {
   return (
     <Grid container direction="row" className={classes.mainContainer}>
       <Container className={classes.secondSection}>
-        <Grid item  direction={matchesXS? 'column' : 'row'} container justify='space-between' alignItems={matchesXS? 'center' :''}>
-        <Grid item >
-          <Typography variant="h6" className={classes.firstText}>Neeeo</Typography>
-          <div className={classes.subTextCont}>
-          <Typography textAlign='center' className={classes.firstSubtext} style={{paddingBottom:'7px'}}>
-            Lorem ipsum dolor sit amet consectetur 
-          </Typography>
-          <Typography textAlign='center' style={{paddingBottom:'7px'}}>
-            Lorem ipsum dolor sit amet consectetur 
-          </Typography>
-          </div>
-        </Grid>
-        <Grid direction="column">
-        <Typography className={classes.otherHeadText}>Products</Typography>
-        <div className={classes.prodTypo}>
-
-          <Typography style={{paddingBottom:'7px'}}>Products</Typography>
-          <Typography style={{paddingBottom:'7px'}}>Pricing</Typography>
-          <Typography style={{paddingBottom:'7px'}}>Log in</Typography>
-          <Typography style={{paddingBottom:'7px'}}>Partnership</Typography>
-          </div>
-        </Grid>
-        <Grid direction="column">
-        <Typography className={classes.otherHeadText}>About us</Typography>
-        <div className={classes.prodTypo}>
-
-          <Typography style={{paddingBottom:'7px'}}>About Neeo</Typography>
-          <Typography style={{paddingBottom:'7px'}}>Contact us</Typography>
-          <Typography style={{paddingBottom:'7px'}}>Features</Typography>
-          <Typography style={{paddingBottom:'7px'}}>Carriers</Typography>
-          </div>
-        </Grid>
-        <Grid direction="column">
-        <Typography className={classes.otherHeadText}>Resources</Typography>
-        <div className={classes.prodTypo}>
-
-          <Typography style={{paddingBottom:'7px'}}>Help center</Typography>
-          <Typography style={{paddingBottom:'7px'}}>Book a demo</Typography>
-          <Typography style={{paddingBottom:'7px'}}>Server status</Typography>
-          </div>
-        </Grid>
-        <Grid direction="column">
-        <Typography className={classes.otherHeadText}>Get in Touch</Typography>
-        <div className={classes.prodTypo}>
-        
-          <Typography style={{paddingBottom:'7px'}}>Lorem ipsum, dolor sit amet </Typography>
-          <Typography style={{paddingBottom:'7px'}}>Lorem ipsum, dolor sit amet consectetur</Typography>
-          </div>
-          <div className={classes.iconsCont}> 
-          <FacebookIcon className={classes.icons}/>
-          <InstagramIcon className={classes.icons}/>
-          <TwitterIcon className={classes.icons}/>
-        </div>
-        </Grid>
-        
+        <Grid
+          item
+          direction={matchesXS ? "column" : "row"}
+          container
+          justify="space-between"
+          alignItems={matchesXS ? "center" : ""}
+          style={{ marginBottom: "50px" }}
+        >
+          <Grid item>
+            <Typography variant="h6" className={classes.firstText}>
+              Neeeo
+            </Typography>
+            <div className={classes.subTextCont}>
+              <Typography
+                textAlign="center"
+                className={classes.firstSubtext}
+                style={{ paddingBottom: "7px" }}
+              >
+                Lorem ipsum dolor sit amet consectetur
+              </Typography>
+              <Typography textAlign="center" style={{ paddingBottom: "7px" }}>
+                Lorem ipsum dolor sit amet consectetur
+              </Typography>
+            </div>
+          </Grid>
+          <Grid direction="column">
+            <Typography className={classes.otherHeadText}>Products</Typography>
+            <div className={classes.prodTypo}>
+              <Typography style={{ paddingBottom: "7px" }}>Products</Typography>
+              <Typography style={{ paddingBottom: "7px" }}>Pricing</Typography>
+              <Typography style={{ paddingBottom: "7px" }}>Log in</Typography>
+              <Typography style={{ paddingBottom: "7px" }}>
+                Partnership
+              </Typography>
+            </div>
+          </Grid>
+          <Grid direction="column">
+            <Typography className={classes.otherHeadText}>About us</Typography>
+            <div className={classes.prodTypo}>
+              <Typography style={{ paddingBottom: "7px" }}>
+                About Neeo
+              </Typography>
+              <Typography style={{ paddingBottom: "7px" }}>
+                Contact us
+              </Typography>
+              <Typography style={{ paddingBottom: "7px" }}>Features</Typography>
+              <Typography style={{ paddingBottom: "7px" }}>Carriers</Typography>
+            </div>
+          </Grid>
+          <Grid direction="column">
+            <Typography className={classes.otherHeadText}>Resources</Typography>
+            <div className={classes.prodTypo}>
+              <Typography style={{ paddingBottom: "7px" }}>
+                Help center
+              </Typography>
+              <Typography style={{ paddingBottom: "7px" }}>
+                Book a demo
+              </Typography>
+              <Typography style={{ paddingBottom: "7px" }}>
+                Server status
+              </Typography>
+            </div>
+          </Grid>
+          <Grid direction="column">
+            <Typography className={classes.otherHeadText}>
+              Get in Touch
+            </Typography>
+            <div className={classes.prodTypo}>
+              <Typography style={{ paddingBottom: "7px" }}>
+                Lorem ipsum, dolor sit amet{" "}
+              </Typography>
+              <Typography style={{ paddingBottom: "7px" }}>
+                Lorem ipsum, dolor sit amet consectetur
+              </Typography>
+            </div>
+            <div className={classes.iconsCont}>
+              <FacebookIcon className={classes.icons} />
+              <InstagramIcon className={classes.icons} />
+              <TwitterIcon className={classes.icons} />
+            </div>
+          </Grid>
         </Grid>
       </Container>
     </Grid>
