@@ -81,10 +81,14 @@ const useStyles = makeStyles((theme) => ({
     width: '80%',
     "& h6": {
       fontWeight:'bolder',
+      fontFamily:'Roboto',
+      letterSpacing:'0.7px'
     },
     "& p": {
       marginTop:'-5px',
       fontWeight:'lighter',
+      fontFamily:'Roboto',
+      letterSpacing:'0.5px'
     }
   },
   arrowIcon: {

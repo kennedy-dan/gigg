@@ -37,6 +37,8 @@ const useStyles = makeStyles((theme) => ({
   },
   typo: {
     fontSize: "11px",
+    letterSpacing:'0.5px',
+    fontFamily:'Roboto',
     [theme.breakpoints.down('xs')] : {
       fontSize: '9px'
     },
@@ -53,6 +55,8 @@ const useStyles = makeStyles((theme) => ({
   },
   mainText: {
     fontSize: "3.5em",
+    fontFamily:'Roboto',
+    letterSpacing:'0.8px',
     fontWeight: '3em',
     [theme.breakpoints.down('sm')]: {
       fontSize:'2.6em'
@@ -64,6 +68,8 @@ const useStyles = makeStyles((theme) => ({
   subTypo: {
     fontSize: "1.1em",
     textAlign: "center",
+    fontFamily: 'Roboto Mono', 
+    letterSpacing:'1px',
     width: "40%",
     [theme.breakpoints.down("sm")]: {
       width: "70%",

@@ -127,10 +127,14 @@ const useStyles = makeStyles((theme) => ({
       
       "& h6": {
         fontWeight:'bolder',
+        fontFamily:'Roboto',
+      letterSpacing:'0.7px'
       },
       "& p": {
         marginTop:'-5px',
         fontWeight:'lighter',
+        fontFamily:'Roboto',
+      letterSpacing:'0.5px'
       },
       [theme.breakpoints.up('md')] : {
         // paddingTop: '125px'

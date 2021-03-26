@@ -17,7 +17,7 @@ import banner from "../../assets/bannerimg.svg";
  **/
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.banner.main,
     marginTop: "5em",
     // height: "100%",
   },
@@ -25,8 +25,14 @@ const useStyles = makeStyles((theme) => ({
     // maxHeight: "20em",
     width: "",
     height:'32em',
+    [theme.breakpoints.down('sm')]:{
+        width:'13em'
+    },
+    [theme.breakpoints.down('xs')]:{
+        width:'22em'
+    },
     // alignItems: "center",
-    marginLeft:'4em',
+    marginLeft:'6em',
     [theme.breakpoints.down('sm')] : {
      marginLeft:0,
      marginTop:'3em'   
@@ -34,12 +40,18 @@ const useStyles = makeStyles((theme) => ({
   },
   btn: {
     marginTop: "1.7em",
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.secondary.main,
+    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.secondary.main,
     borderRadius: 0,
+    // width:'100%',
+    [theme.breakpoints.down('xs')]:{
+        textAlign:'center',
+        alignItems:'center',
+        alignSelf:'center'
+    },
   },
   firstTypo: {
-    color: theme.palette.primary.main,
+    color: theme.palette.secondary.main,
     fontSize: "16px",
     letterSpacing:'1.7px',
     [theme.breakpoints.up('md')] : {
@@ -55,6 +67,9 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "-2em",
 
     },
+    [theme.breakpoints.down('xs')]:{
+        textAlign:'center'
+    },
     letterSpacing:'2.1px'
 
   },
@@ -64,7 +79,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop:'1em',
     width: "80%",
     fontFamily:'Roboto',
-    letterSpacing:'2.1px'
+    letterSpacing:'2.1px',
+    [theme.breakpoints.down('xs')]:{
+        textAlign:'center',
+        width:'100%'
+    },
   },
   rowCont: {
     paddingBottom: "1.5em",
@@ -73,12 +92,16 @@ const useStyles = makeStyles((theme) => ({
 
 const Banner = (props) => {
   const classes = useStyles();
+  const theme = useTheme()
+
+  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
+
   return (
     <Grid container direction="column" className={classes.mainContainer}>
         
 <Container>
 <Grid item container direction="column">
-  <Grid item container>
+  <Grid item container justify={matchesXS? 'center':""}>
     <Typography
       style={{ marginTop: "3em" }}
       className={classes.firstTypo}
@@ -88,24 +111,26 @@ const Banner = (props) => {
   </Grid>
   <Grid
     container
-    justify=""
+    // justify="space-between"
     className={classes.rowCont}
     alignItems='center'
+    // direction={matchesXS ? 'column' : 'row'}
+    justify={matchesXS? 'center':""}
   >
     <Grid
       item
       direction="column"
       sm
-      justify="center"
+    //   justify="center"
     >
-      <Typography color="primary" 
+      <Typography color="secondary" 
       
       className={classes.secondTypo}>
         Lorem Ipsum
       </Typography>
       <Typography
         style={{}}
-        color="primary"
+        color="secondary"
         className={classes.thirdTypo}
         variant='body1'
 
@@ -119,9 +144,11 @@ const Banner = (props) => {
         dignissimos explicabo? Aliquam temporibus, soluta sapiente ut
         facilis autem non ea fugiat!
       </Typography>
+      <Grid item container justify={matchesXS ? 'center':''}>
       <Button variant="contained" className={classes.btn}>
-        Lorem{" "}
+        <Typography>Lorem</Typography> 
       </Button>
+      </Grid>
     </Grid>
     <Grid item style={{}} sm>
       <img src={banner} className={classes.bannerbg} />
@@ -129,70 +156,10 @@ const Banner = (props) => {
   </Grid>
 </Grid>
 </Container>
-        {/* <Grid item>
-            <Typography>Featured Plants</Typography>
-        </Grid>
-        <Grid item container direction='row'>
-            <Grid item>
-                <img src={banner} className={classes.bannerbg} alt='ban'/>
-            </Grid>
-        </Grid> */}
+
     </Grid>
   );
 };
 
 export default Banner;
 
-
-{/* <Container>
-<Grid item container direction="column">
-  <Grid item container>
-    <Typography
-      style={{ marginTop: "3em" }}
-      className={classes.firstTypo}
-    >
-      Featured Plants
-    </Typography>
-  </Grid>
-  <Grid
-    container
-    justify="space-between"
-    
-    className={classes.rowCont}
-  >
-    <Grid
-      item
-      direction="column"
-      xs
-    //   alignItems="flex-start"
-      justify="center"
-    >
-      <Typography color="primary" 
-      
-      className={classes.secondTypo}>
-        Lorem Ipsum
-      </Typography>
-      <Typography
-        style={{}}
-        color="primary"
-        className={classes.thirdTypo}
-      >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Sapiente dolore perspiciatis id assumenda, vero, nesciunt
-        perferendis eveniet qui ea sequi rerum magni iure aspernatur
-        unde doloribus illum illo distinctio modi? Lorem ipsum dolor sit
-        amet consectetur, adipisicing elit. Harum vitae rem expedita
-        nobis omnis consectetur assumenda reprehenderit, nostrum
-        dignissimos explicabo? Aliquam temporibus, soluta sapiente ut
-        facilis autem non ea fugiat!
-      </Typography>
-      <Button variant="contained" className={classes.btn}>
-        Lorem{" "}
-      </Button>
-    </Grid>
-    <Grid item style={{}} xs>
-      <img src={banner} className={classes.bannerbg} />
-    </Grid>
-  </Grid>
-</Grid>
-</Container> */}

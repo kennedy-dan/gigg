@@ -74,14 +74,23 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     fontSize: "13px",
     fontWeight: "90px",
+    fontFamily:'Roboto',
+      letterSpacing:'0.7px',
     [theme.breakpoints.down("xs")]: {
       textAlign: "center",
       // marginTop: "3em",
     },
   },
+  subTypo:{
+    paddingBottom:'7px',
+    fontFamily:'Roboto',
+      letterSpacing:'1px'
+  },
   prodTypo: {
     color: theme.palette.advance.main,
     marginTop: "9px",
+    fontFamily:'Roboto',
+      letterSpacing:'0.7px',
     [theme.breakpoints.down("xs")]: {
       textAlign: "center",
       // marginTop: "3em",
@@ -90,8 +99,11 @@ const useStyles = makeStyles((theme) => ({
   },
 
   firstSubtext: {
+    fontFamily:'Roboto',
+      letterSpacing:'1px'
     // marginTop:'30px',
     // color:theme.palette.primary.main
+    
   },
 }));
 const defaultProps = {
@@ -127,10 +139,14 @@ const Footer = (props) => {
                 textAlign="center"
                 className={classes.firstSubtext}
                 style={{ paddingBottom: "7px" }}
+                
               >
                 Lorem ipsum dolor sit amet consectetur
               </Typography>
-              <Typography textAlign="center" style={{ paddingBottom: "7px" }}>
+              <Typography textAlign="center" style={{ paddingBottom: "7px" }} 
+                className={classes.firstSubtext}
+              
+              >
                 Lorem ipsum dolor sit amet consectetur
               </Typography>
             </div>
@@ -138,10 +154,10 @@ const Footer = (props) => {
           <Grid direction="column">
             <Typography className={classes.otherHeadText}>Products</Typography>
             <div className={classes.prodTypo}>
-              <Typography style={{ paddingBottom: "7px" }}>Products</Typography>
-              <Typography style={{ paddingBottom: "7px" }}>Pricing</Typography>
-              <Typography style={{ paddingBottom: "7px" }}>Log in</Typography>
-              <Typography style={{ paddingBottom: "7px" }}>
+              <Typography  className={classes.subTypo}>Products</Typography>
+              <Typography  className={classes.subTypo}>Pricing</Typography>
+              <Typography  className={classes.subTypo}>Log in</Typography>
+              <Typography  className={classes.subTypo}>
                 Partnership
               </Typography>
             </div>
@@ -149,26 +165,26 @@ const Footer = (props) => {
           <Grid direction="column">
             <Typography className={classes.otherHeadText}>About us</Typography>
             <div className={classes.prodTypo}>
-              <Typography style={{ paddingBottom: "7px" }}>
+              <Typography  className={classes.subTypo}>
                 About Neeo
               </Typography>
-              <Typography style={{ paddingBottom: "7px" }}>
+              <Typography  className={classes.subTypo}>
                 Contact us
               </Typography>
-              <Typography style={{ paddingBottom: "7px" }}>Features</Typography>
-              <Typography style={{ paddingBottom: "7px" }}>Carriers</Typography>
+              <Typography  className={classes.subTypo}>Features</Typography>
+              <Typography  className={classes.subTypo}>Carriers</Typography>
             </div>
           </Grid>
           <Grid direction="column">
             <Typography className={classes.otherHeadText}>Resources</Typography>
             <div className={classes.prodTypo}>
-              <Typography style={{ paddingBottom: "7px" }}>
+              <Typography  className={classes.subTypo}>
                 Help center
               </Typography>
-              <Typography style={{ paddingBottom: "7px" }}>
+              <Typography  className={classes.subTypo}>
                 Book a demo
               </Typography>
-              <Typography style={{ paddingBottom: "7px" }}>
+              <Typography  className={classes.subTypo}>
                 Server status
               </Typography>
             </div>
@@ -178,10 +194,10 @@ const Footer = (props) => {
               Get in Touch
             </Typography>
             <div className={classes.prodTypo}>
-              <Typography style={{ paddingBottom: "7px" }}>
+              <Typography  className={classes.subTypo}>
                 Lorem ipsum, dolor sit amet{" "}
               </Typography>
-              <Typography style={{ paddingBottom: "7px" }}>
+              <Typography  className={classes.subTypo}>
                 Lorem ipsum, dolor sit amet consectetur
               </Typography>
             </div>
