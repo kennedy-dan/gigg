@@ -69,15 +69,19 @@ const useStyles = makeStyles((theme) => ({
 
     "& h6": {
       fontWeight: "bolder",
-      fontFamily:'Roboto',
-      letterSpacing:'0.7px'
+      fontFamily:theme.font.primary.main,
+
+      letterSpacing:'0.7px',
+      fontSize:'16px'
 
     },
     "& p": {
       marginTop: "-5px",
       fontWeight: "lighter",
-      fontFamily:'Roboto',
-      letterSpacing:'0.5px'
+      fontFamily:theme.font.primary.main,
+
+      letterSpacing:'0.2px',
+      fontSize:'14px'
     },
   },
   cont: {
@@ -158,19 +162,26 @@ const useStyles = makeStyles((theme) => ({
   },
 
   fontSize: {
-    fontSize: "13px",
+    fontSize: "24px",
+    fontFamily:theme.font.primary.main,
+
   },
   wrapper: {
     backgroundColor: "black",
   },
   typoTypes: {
-    fontSize: "12px ",
-    fontFamily:'Roboto',
-    letterSpacing:'0.7px'
+    fontSize: "14px ",
+    fontFamily:theme.font.primary.main,
+    [theme.breakpoints.down('xs')]: {
+      textAlign:'center'
+    },
+    letterSpacing:'0.1px'
   },
   btnType: {
     fontSize: "12px",
     boxShadow: "none",
+    fontFamily:theme.font.primary.main,
+
     // marginLeft: '28em'
   },
   typeCont: {
@@ -218,14 +229,12 @@ const Home = (props) => {
           justify={matchesXS ? "center" : "inherit"}
           className={classes.subText}
         >
-          <Typography className={classes.firstText}>
-            <Typography variant={matchesSM ? "h4" : "h3"}>
+            <Typography variant={matchesSM ? "" : ""} className={classes.fontSize}>
               <b>
                 Types of <span style={{ color: "#9cf744" }}> Work </span>
                 Space Available{" "}
               </b>
             </Typography>
-          </Typography>
 
           {/* SUB-TEXT */}
           <Grid
@@ -283,8 +292,7 @@ const Home = (props) => {
               <div className={classes.caption}>
                 <h6>Meeting room</h6>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
-                  illum minima
+                  Lorem ipsum, dolor sit amet consectetur adipisicing
                 </p>
               </div>
             </Grid>
@@ -307,8 +315,8 @@ const Home = (props) => {
               <div className={classes.caption}>
                 <h6>Meeting room</h6>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
-                  illum minima
+                Lorem ipsum, dolor sit amet consectetur adipisicing
+
                 </p>
               </div>
             </Grid>
@@ -331,8 +339,8 @@ const Home = (props) => {
               <div className={classes.caption}>
                 <h6>Meeting room</h6>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
-                  illum minima
+                Lorem ipsum, dolor sit amet consectetur adipisicing
+
                 </p>
               </div>
             </Grid>
@@ -354,8 +362,8 @@ const Home = (props) => {
               <div className={classes.caption}>
                 <h6>Meeting room</h6>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
-                  illum minima
+                Lorem ipsum, dolor sit amet consectetur adipisicing
+
                 </p>
               </div>
             </Grid>

@@ -36,9 +36,10 @@ const useStyles = makeStyles((theme) => ({
     // margin: '8px'
   },
   typo: {
-    fontSize: "11px",
+    fontSize: "14px",
     letterSpacing:'0.5px',
-    fontFamily:'Roboto',
+    fontFamily:theme.font.primary.main,
+
     [theme.breakpoints.down('xs')] : {
       fontSize: '9px'
     },
@@ -48,14 +49,16 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "0.1em",
     marginBottom: "0.1em",
     boxShadow: "none",
+    fontFamily:theme.font.primary.main,
+
     // marginRight: '0.5em'
   },
   header2: {
     color: "white",
   },
   mainText: {
-    fontSize: "3.5em",
-    fontFamily:'Roboto',
+    fontSize: "42px",
+    fontFamily:theme.font.primary.main,
     letterSpacing:'0.8px',
     fontWeight: '3em',
     [theme.breakpoints.down('sm')]: {
@@ -66,10 +69,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   subTypo: {
-    fontSize: "1.1em",
+    fontSize: "16px",
     textAlign: "center",
-    fontFamily: 'Roboto Mono', 
-    letterSpacing:'1px',
+    fontFamily:theme.font.primary.main,
     width: "40%",
     [theme.breakpoints.down("sm")]: {
       width: "70%",
@@ -170,11 +172,12 @@ const FirstBaground = (props) => {
                   </Typography>
                   <Typography className={classes.typo}>Lorem ipsum</Typography>
                 </Grid>
-                <Grid item className={classes.cardBtn}>
+                <Grid item >
                   <Button
                     variant="contained"
                     color="secondary"
                     style={{ boxShadow: "none" }}
+                    className={classes.cardBtn}
                   >
                     Search
                   </Button>

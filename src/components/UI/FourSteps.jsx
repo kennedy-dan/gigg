@@ -57,6 +57,8 @@ const useStyles = makeStyles((theme) => ({
     
     "& h6": {
       fontWeight:'bolder',
+      // fontSize:'16px'
+
     },
     "& p": {
       marginTop:'-5px',
@@ -65,7 +67,10 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mainText: {
-    fontSize:'19px'
+    fontSize: "24px",
+    fontFamily:theme.font.primary.main,
+
+
   },
   box: {
     width: '80%'
@@ -81,14 +86,20 @@ const useStyles = makeStyles((theme) => ({
     width: '80%',
     "& h6": {
       fontWeight:'bolder',
-      fontFamily:'Roboto',
-      letterSpacing:'0.7px'
+      fontFamily:theme.font.primary.main,
+
+      letterSpacing:'0.7px',
+      fontSize:'16px'
+
     },
     "& p": {
       marginTop:'-5px',
       fontWeight:'lighter',
-      fontFamily:'Roboto',
-      letterSpacing:'0.5px'
+      fontFamily:theme.font.primary.main,
+
+      letterSpacing:'0.1px',
+      fontSize:'14px'
+
     }
   },
   arrowIcon: {
@@ -173,11 +184,10 @@ const FourSteps = (props) => {
               <AccountCircleIcon className={classes.accIcon} />{" "}
             </Box>
           </Grid>
-          <Grid container item className={classes.fontSize} justify='center'>
+          <Grid container direction={matchesXS? 'column' : 'row'} item className={classes.fontSize} justify='center'>
             <h6 >Meeting</h6>
             <p>
-            Lorem ipsum, dolor sit amet consectetur earum
-              dignissimos deleniti eum assumenda.
+            Lorem ipsum, dolor sit amet consectetur
             </p>
           </Grid>
         </Grid>
@@ -192,11 +202,10 @@ const FourSteps = (props) => {
               <AccountCircleIcon className={classes.accIcon} />{" "}
             </Box>
           </Grid>
-          <Grid container item className={classes.fontSize} justify='center'>
+          <Grid container direction={matchesXS? 'column' : 'row'} item className={classes.fontSize} justify='center'>
             <h6 >Meeting</h6>
             <p>
-            Lorem ipsum, dolor sit amet consectetur earum
-              dignissimos deleniti eum assumenda.
+            Lorem ipsum, dolor sit amet consectetur
             </p>
           </Grid>
         </Grid>
@@ -210,11 +219,10 @@ const FourSteps = (props) => {
               <AccountCircleIcon className={classes.accIcon} />{" "}
             </Box>
           </Grid>
-          <Grid container item style={{ marginTop: "0.5em" }} className={classes.fontSize}  justify='center'>
+          <Grid container direction={matchesXS? 'column' : 'row'} item style={{ marginTop: "0.5em" }} className={classes.fontSize}  justify='center'>
             <h6 >Meeting</h6>
             <p>
-            Lorem ipsum, dolor sit amet consectetur earum
-              dignissimos deleniti eum assumenda.
+            Lorem ipsum, dolor sit amet consectetur 
             </p>
           </Grid>
         </Grid>
@@ -229,11 +237,10 @@ const FourSteps = (props) => {
               <AccountCircleIcon className={classes.accIcon} />{" "}
             </Box>
           </Grid>
-          <Grid container item style={{ marginTop: "0.5em" }} justify='center' className={classes.fontSize} >
+          <Grid container direction={matchesXS? 'column' : 'row'} item style={{ marginTop: "0.5em" }} justify='center' className={classes.fontSize} >
             <h6 >Meeting</h6>
             <p>
-            Lorem ipsum, dolor sit amet consectetur earum
-              dignissimos deleniti eum assumenda.
+            Lorem ipsum, dolor sit amet consectetur 
               
             </p>
           </Grid>

@@ -18,7 +18,7 @@ import banner from "../../assets/bannerimg.svg";
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     backgroundColor: theme.palette.banner.main,
-    marginTop: "5em",
+    marginTop: "10em",
     // height: "100%",
   },
   bannerbg: {
@@ -42,7 +42,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "1.7em",
     color: theme.palette.primary.main,
     backgroundColor: theme.palette.secondary.main,
+    fontFamily:theme.font.primary.main,
     borderRadius: 0,
+    // fontSize:'16px',
+
     // width:'100%',
     [theme.breakpoints.down('xs')]:{
         textAlign:'center',
@@ -52,17 +55,20 @@ const useStyles = makeStyles((theme) => ({
   },
   firstTypo: {
     color: theme.palette.secondary.main,
-    fontSize: "16px",
+    fontFamily:theme.font.primary.main,
+    fontSize: "18px",
     letterSpacing:'1.7px',
     [theme.breakpoints.up('md')] : {
-        paddingTop: "5em",
+        // paddingTop: "5em",
 
        }
 
 
   },
   secondTypo: {
-    fontSize: "14px",
+    fontSize: "16px",
+    fontFamily:theme.font.primary.main,
+
     [theme.breakpoints.up('md')]:{
         marginTop: "-2em",
 
@@ -74,12 +80,13 @@ const useStyles = makeStyles((theme) => ({
 
   },
   thirdTypo: {
-    fontSize: "11px",
+    fontSize: "14px",
     marginBottom: "8px",
     marginTop:'1em',
     width: "80%",
-    fontFamily:'Roboto',
-    letterSpacing:'2.1px',
+    fontFamily:theme.font.primary.main,
+
+    letterSpacing:'1px',
     [theme.breakpoints.down('xs')]:{
         textAlign:'center',
         width:'100%'
@@ -146,7 +153,7 @@ const Banner = (props) => {
       </Typography>
       <Grid item container justify={matchesXS ? 'center':''}>
       <Button variant="contained" className={classes.btn}>
-        <Typography>Lorem</Typography> 
+        Lorem 
       </Button>
       </Grid>
     </Grid>

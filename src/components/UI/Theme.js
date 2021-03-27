@@ -4,6 +4,7 @@ const blueTheme = '#197519'
 const whiteTheme = '#FFFFFF'
 const darkWhite ='#afafaf'
 const lightGreen = '#f9fbf9'
+const fontFamily = 'Tenor Sans'
 
 export default createMuiTheme ({
     palette: {
@@ -25,6 +26,11 @@ export default createMuiTheme ({
         },
         banner: {
             main :`${lightGreen}`
+        }
+    },
+    font: {
+        primary: {
+            main:`${fontFamily}`
         }
     },
     typography: {

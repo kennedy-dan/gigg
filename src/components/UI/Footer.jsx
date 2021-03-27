@@ -8,6 +8,7 @@ import {
   useMediaQuery,
 } from "@material-ui/core";
 import FacebookIcon from "@material-ui/icons/Facebook";
+import fb from '../../assets/fb.png'
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import { fade, makeStyles } from "@material-ui/core/styles";
@@ -31,7 +32,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   icons: {
-    fontSize: "25px",
+    fontSize: "35px",
+    padding:"0.8px",
     // margin: "6px",
     color: theme.palette.primary.main,
   },
@@ -58,6 +60,8 @@ const useStyles = makeStyles((theme) => ({
   },
   firstText: {
     color: theme.palette.primary.main,
+    fontFamily:theme.font.primary.main,
+
     fontSize: "20px",
     marginTop: "50px",
     [theme.breakpoints.down("xs")]: {
@@ -74,7 +78,8 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     fontSize: "13px",
     fontWeight: "90px",
-    fontFamily:'Roboto',
+    fontFamily:theme.font.primary.main,
+
       letterSpacing:'0.7px',
     [theme.breakpoints.down("xs")]: {
       textAlign: "center",
@@ -83,7 +88,8 @@ const useStyles = makeStyles((theme) => ({
   },
   subTypo:{
     paddingBottom:'7px',
-    fontFamily:'Roboto',
+    fontFamily:theme.font.primary.main,
+
       letterSpacing:'1px'
   },
   prodTypo: {
@@ -99,7 +105,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   firstSubtext: {
-    fontFamily:'Roboto',
+    fontFamily:theme.font.primary.main,
+
       letterSpacing:'1px'
     // marginTop:'30px',
     // color:theme.palette.primary.main

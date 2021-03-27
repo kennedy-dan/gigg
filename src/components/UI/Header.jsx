@@ -38,6 +38,8 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     // display: "none",
+    fontFamily:theme.font.primary.main,
+
     [theme.breakpoints.up("sm")]: {
       display: "block",
     },
@@ -58,6 +60,8 @@ const useStyles = makeStyles((theme) => ({
   titleScroll: {
     // display: "none",
     marginTop: "8px",
+    fontFamily:theme.font.primary.main,
+
     [theme.breakpoints.down("xs")]: {
       // marginTop: "5em",
       marginLeft: "1px",
@@ -114,22 +118,39 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     fontWeight: 9000,
     color: theme.palette.primary.main,
+    fontFamily:theme.font.primary.main,
+
     // color: "white",
     fontSize: "14px",
+   
   },
   tabScrolled: {
     marginLeft: "25px",
     minWidth: 5,
     textTransform: "none",
     fontWeight: 9000,
+    fontFamily:theme.font.primary.main,
+
     // color: theme.palette.primary.main,
     color: "black",
     fontSize: "14px",
   },
   btn: {
     fontSize: "13px",
-    color: "white",
+    color: theme.palette.primary.main,
     boxShadow: "none",
+    borderRadius:0,
+    fontFamily:theme.font.primary.main,
+    textTransform:'none'
+
+  },
+  scrollBtn: {
+    fontSize: "13px",
+    color: 'black',
+    boxShadow: "none",
+    borderRadius:0,
+    fontFamily:theme.font.primary.main,
+    textTransform:'none'
   },
   btnCont: {
     marginTop: "6px",
@@ -232,7 +253,9 @@ export default function Header() {
       </Grid>
       <Grid item className={classes.btnCont}>
         <Grid container>
-          <Button className={classes.btn} color="primary">
+          <Button   className={`${classes.btn} ${
+                trigger === false ? "" : classes.scrollBtn
+              }`}>
             Log in
           </Button>
           <Button className={classes.btn} variant="contained" color="secondary">
