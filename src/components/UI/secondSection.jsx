@@ -69,12 +69,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       maxWidth: "270px",
       maxHeight: "270px",
-      marginBottom: "6em",
+      marginBottom: "8em",
     },
     [theme.breakpoints.down("xs")]: {
       maxWidth: "332px",
       height: "280px",
-      marginBottom: "6em",
+      marginBottom: "11em",
     },
   },
   bg3: {
@@ -142,7 +142,7 @@ const useStyles = makeStyles((theme) => ({
     },
     "& p": {
       marginTop: "-5px",
-      fontWeight: "lighter",
+      // fontWeight: "lighter",
       // fontFamily:'Roboto',
       fontSize: "14px",
       fontFamily: theme.font.primary.main,
@@ -244,10 +244,10 @@ const SecondSection = (props) => {
             </Grid>
             <div className={classes.caption}>
               <h6>Meeting room</h6>
-              <p>
+              <Typography>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
                 illum minima
-              </p>
+              </Typography>
             </div>
           </Grid>
         </Grid>
@@ -274,10 +274,10 @@ const SecondSection = (props) => {
             </Grid>
             <div className={classes.caption}>
               <h6>Meeting room</h6>
-              <p>
+              <Typography>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
                 illum minima
-              </p>
+              </Typography>
             </div>
           </Grid>
         </Grid>
@@ -306,10 +306,10 @@ const SecondSection = (props) => {
             </Grid>
             <div className={classes.caption}>
               <h6>Meeting room</h6>
-              <p>
+              <Typography>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
                 illum minima
-              </p>
+              </Typography>
             </div>
           </Grid>
         </Grid>

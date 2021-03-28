@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
     },
     "& p": {
       marginTop: "-5px",
-      fontWeight: "lighter",
+      // fontWeight: "lighter",
       fontFamily: theme.font.primary.main,
       letterSpacing: "0.1px",
       fontSize: "14px",
@@ -140,6 +140,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "14px",
     marginTop: "15px",
     marginBottom: "10px",
+    fontFamily: theme.font.primary.main
   },
 }));
 
@@ -211,7 +212,7 @@ const FourSteps = (props) => {
               justify="center"
             >
               <h6>Meeting</h6>
-              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <Typography>Lorem ipsum, dolor sit amet consectetur</Typography>
             </Grid>
           </Grid>
 
@@ -244,7 +245,7 @@ const FourSteps = (props) => {
               justify="center"
             >
               <h6>Meeting</h6>
-              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <Typography>Lorem ipsum, dolor sit amet consectetur</Typography>
             </Grid>
           </Grid>
           <ArrowRightAltIcon className={classes.arrowIcon} />
@@ -277,7 +278,7 @@ const FourSteps = (props) => {
               justify="center"
             >
               <h6>Meeting</h6>
-              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <Typography>Lorem ipsum, dolor sit amet consectetur</Typography>
             </Grid>
           </Grid>
           <ArrowRightAltIcon className={classes.arrowIcon} />
@@ -311,7 +312,7 @@ const FourSteps = (props) => {
               className={classes.fontSize}
             >
               <h6>Meeting</h6>
-              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <Typography>Lorem ipsum, dolor sit amet consectetur</Typography>
             </Grid>
           </Grid>
 

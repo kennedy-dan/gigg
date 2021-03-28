@@ -108,18 +108,14 @@ const Banner = (props) => {
     <Grid container direction="column" className={classes.mainContainer}>
       <Container>
         <Grid item container direction="column">
-          <Grid
-            item
-            container
-            justify={matchesXS ? "center" : ""}
-            data-aos="fade-left"
-            data-aos-offset="200"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="400"
-          >
+          <Grid item container justify={matchesXS ? "center" : ""}>
             <Typography
               style={{ marginTop: "3em" }}
               className={classes.firstTypo}
+              data-aos="fade-left"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="400"
             >
               Featured Plants
             </Typography>
@@ -132,40 +128,37 @@ const Banner = (props) => {
             // direction={matchesXS ? 'column' : 'row'}
             justify={matchesXS ? "center" : ""}
           >
-            <Grid
-              item
-              direction="column"
-              sm
-              data-aos="fade-left"
-              data-aos-offset="200"
-              data-aos-easing="ease-in-sine"
-              data-aos-duration="400"
-              // data-aos-delay='100'
-              //   justify="center"
-            >
-              <Typography color="secondary" className={classes.secondTypo}>
-                Lorem Ipsum
-              </Typography>
-              <Typography
-                style={{}}
-                color="secondary"
-                className={classes.thirdTypo}
-                variant="body1"
+            <Grid item direction="column" sm>
+              <div
+                data-aos="fade-left"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="400"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Sapiente dolore perspiciatis id assumenda, vero, nesciunt
-                perferendis eveniet qui ea sequi rerum magni iure aspernatur
-                unde doloribus illum illo distinctio modi? Lorem ipsum dolor sit
-                amet consectetur, adipisicing elit. Harum vitae rem expedita
-                nobis omnis consectetur assumenda reprehenderit, nostrum
-                dignissimos explicabo? Aliquam temporibus, soluta sapiente ut
-                facilis autem non ea fugiat!
-              </Typography>
-              <Grid item container justify={matchesXS ? "center" : ""}>
-                <Button variant="contained" className={classes.btn}>
-                  Lorem
-                </Button>
-              </Grid>
+                <Typography color="secondary" className={classes.secondTypo}>
+                  Lorem Ipsum
+                </Typography>
+                <Typography
+                  style={{}}
+                  color="secondary"
+                  className={classes.thirdTypo}
+                  variant="body1"
+                >
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sapiente dolore perspiciatis id assumenda, vero, nesciunt
+                  perferendis eveniet qui ea sequi rerum magni iure aspernatur
+                  unde doloribus illum illo distinctio modi? Lorem ipsum dolor
+                  sit amet consectetur, adipisicing elit. Harum vitae rem
+                  expedita nobis omnis consectetur assumenda reprehenderit,
+                  nostrum dignissimos explicabo? Aliquam temporibus, soluta
+                  sapiente ut facilis autem non ea fugiat!
+                </Typography>
+                <Grid item container justify={matchesXS ? "center" : ""}>
+                  <Button variant="contained" className={classes.btn}>
+                    Lorem
+                  </Button>
+                </Grid>
+              </div>
             </Grid>
             <Grid
               item

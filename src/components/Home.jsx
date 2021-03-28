@@ -110,7 +110,16 @@ const useStyles = makeStyles((theme) => ({
   },
 
   firstsec1: {
-    // marginLeft: "1%",
+    "& p": {
+      fontSize: "14px ",
+      letterSpacing: "0.1px",
+
+      // fontWeight:'lighter',
+      fontFamily: theme.font.primary.main,
+      [theme.breakpoints.down("xs")]: {
+        textAlign: "center",
+      },
+    }
   },
   firstsec2: {
     [theme.breakpoints.down("xs")]: {
@@ -170,12 +179,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "black",
   },
   typoTypes: {
-    fontSize: "14px ",
-    fontFamily: theme.font.primary.main,
-    [theme.breakpoints.down("xs")]: {
-      textAlign: "center",
-    },
-    letterSpacing: "0.1px",
+    // fontSize: "14px ",
+    // // fontWeight:'1px',
+    // fontFamily: theme.font.primary.main,
+    // [theme.breakpoints.down("xs")]: {
+    //   textAlign: "center",
+    // },
+    // letterSpacing: "0.1px",
   },
   btnType: {
     fontSize: "12px",
@@ -194,6 +204,8 @@ const useStyles = makeStyles((theme) => ({
   hoverTypo: {
     alignItems: "center",
     fontSize: "18px",
+    fontFamily: theme.font.primary.main,
+
     // marginTop:'8em',
     color: theme.palette.primary.main,
     // marginLeft: '4.8em'
@@ -252,10 +264,10 @@ const Home = (props) => {
             alignItems={matchesXS ? "center" : null}
           >
             <Grid item className={classes.firstsec1}>
-              <Typography className={classes.typoTypes}>
+              <Typography >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               </Typography>
-              <Typography className={classes.typoTypes}>
+              <Typography >
                 Lorem ipsum dolor sit amet, cons
               </Typography>
             </Grid>
