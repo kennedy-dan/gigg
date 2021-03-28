@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Button,
   Grid,
@@ -20,6 +20,8 @@ import FourSteps from "./UI/FourSteps";
 import Header from "./UI/Header";
 import SecondSection from "./UI/secondSection";
 import Banner from "./UI/Banner";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 /**
  * @author
@@ -69,19 +71,18 @@ const useStyles = makeStyles((theme) => ({
 
     "& h6": {
       fontWeight: "bolder",
-      fontFamily:theme.font.primary.main,
+      fontFamily: theme.font.primary.main,
 
-      letterSpacing:'0.7px',
-      fontSize:'16px'
-
+      letterSpacing: "0.7px",
+      fontSize: "16px",
     },
     "& p": {
       marginTop: "-5px",
-      fontWeight: "lighter",
-      fontFamily:theme.font.primary.main,
+      // fontWeight: "lighter",
+      fontFamily: theme.font.primary.main,
 
-      letterSpacing:'0.2px',
-      fontSize:'14px'
+      letterSpacing: "0.2px",
+      fontSize: "14px",
     },
   },
   cont: {
@@ -163,24 +164,23 @@ const useStyles = makeStyles((theme) => ({
 
   fontSize: {
     fontSize: "24px",
-    fontFamily:theme.font.primary.main,
-
+    fontFamily: theme.font.primary.main,
   },
   wrapper: {
     backgroundColor: "black",
   },
   typoTypes: {
     fontSize: "14px ",
-    fontFamily:theme.font.primary.main,
-    [theme.breakpoints.down('xs')]: {
-      textAlign:'center'
+    fontFamily: theme.font.primary.main,
+    [theme.breakpoints.down("xs")]: {
+      textAlign: "center",
     },
-    letterSpacing:'0.1px'
+    letterSpacing: "0.1px",
   },
   btnType: {
     fontSize: "12px",
     boxShadow: "none",
-    fontFamily:theme.font.primary.main,
+    fontFamily: theme.font.primary.main,
 
     // marginLeft: '28em'
   },
@@ -216,6 +216,9 @@ const Home = (props) => {
   const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <Grid container direction="column">
       <Grid item>
@@ -229,12 +232,15 @@ const Home = (props) => {
           justify={matchesXS ? "center" : "inherit"}
           className={classes.subText}
         >
-            <Typography variant={matchesSM ? "" : ""} className={classes.fontSize}>
-              <b>
-                Types of <span style={{ color: "#9cf744" }}> Work </span>
-                Space Available{" "}
-              </b>
-            </Typography>
+          <Typography
+            variant={matchesSM ? "" : ""}
+            className={classes.fontSize}
+          >
+            <b>
+              Types of <span style={{ color: "#9cf744" }}> Work </span>
+              Space Available{" "}
+            </b>
+          </Typography>
 
           {/* SUB-TEXT */}
           <Grid
@@ -275,7 +281,14 @@ const Home = (props) => {
           style={{ padding: "0 !important" }}
           className={classes.galleryGrid}
         >
-          <Grid item>
+          <Grid
+            item
+            data-aos="zoom-out"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="300"
+            // data-aos-delay='100'
+          >
             <Grid
               item
               container
@@ -291,14 +304,19 @@ const Home = (props) => {
               </Grid>
               <div className={classes.caption}>
                 <h6>Meeting room</h6>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing
-                </p>
+                <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing</Typography>
               </div>
             </Grid>
           </Grid>
 
-          <Grid item>
+          <Grid
+            item
+            data-aos="zoom-out"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="300"
+            data-aos-delay="200"
+          >
             <Grid
               item
               container
@@ -314,15 +332,20 @@ const Home = (props) => {
               </Grid>
               <div className={classes.caption}>
                 <h6>Meeting room</h6>
-                <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing
+                <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing</Typography>
 
-                </p>
               </div>
             </Grid>
           </Grid>
 
-          <Grid item>
+          <Grid
+            item
+            data-aos="zoom-out"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="300"
+            data-aos-delay="400"
+          >
             <Grid
               item
               container
@@ -338,14 +361,19 @@ const Home = (props) => {
               </Grid>
               <div className={classes.caption}>
                 <h6>Meeting room</h6>
-                <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing
+                <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing</Typography>
 
-                </p>
               </div>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid
+            item
+            data-aos="zoom-out"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="300"
+            data-aos-delay="500"
+          >
             <Grid
               item
               container
@@ -361,10 +389,8 @@ const Home = (props) => {
               </Grid>
               <div className={classes.caption}>
                 <h6>Meeting room</h6>
-                <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing
+                <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing</Typography>
 
-                </p>
               </div>
             </Grid>
           </Grid>

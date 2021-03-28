@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   growDrawer: {
-    ...theme.mixins.toolbar,
+    // ...theme.mixins.toolbar,
     width: 'auto'
   },
   menuButton: {
@@ -67,10 +67,6 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "1px",
       // color: 'yellow'
     },
-    // [theme.breakpoints.down("md")]: {
-    //   // marginTop: "-5em",
-    //   color: 'red'
-    // },
     color: "black",
     marginLeft: "1em",
     fontSize: "18px",
@@ -121,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily:theme.font.primary.main,
 
     // color: "white",
-    fontSize: "14px",
+    fontSize: "1em",
    
   },
   tabScrolled: {
@@ -130,10 +126,8 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     fontWeight: 9000,
     fontFamily:theme.font.primary.main,
-
-    // color: theme.palette.primary.main,
     color: "black",
-    fontSize: "14px",
+    fontSize: "1em",
   },
   btn: {
     fontSize: "13px",
@@ -179,7 +173,8 @@ const useStyles = makeStyles((theme) => ({
   },
   cancelIcon : {
     fontSize: '30px',
-    marginRight: '15px',
+    marginRight: '45px',
+    marginTop:'10px',
     color: theme.palette.primary.main,
 
   }

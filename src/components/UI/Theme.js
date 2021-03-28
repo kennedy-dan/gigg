@@ -4,7 +4,7 @@ const blueTheme = '#197519'
 const whiteTheme = '#FFFFFF'
 const darkWhite ='#afafaf'
 const lightGreen = '#f9fbf9'
-const fontFamily = 'Tenor Sans'
+const fontFamily = 'Raleway'
 
 export default createMuiTheme ({
     palette: {

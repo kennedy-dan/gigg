@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Grid,
   Typography,
@@ -12,6 +12,11 @@ import fb from '../../assets/fb.png'
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import { fade, makeStyles } from "@material-ui/core/styles";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import {faFacebookF, faFacebook,faInstagram,faTwitter} from '@fortawesome/free-brands-svg-icons'
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 /**
  * @author
@@ -32,10 +37,17 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   icons: {
-    fontSize: "35px",
-    padding:"0.8px",
+    fontSize: "30px",
+    // paddingLeft:"13px",
     // margin: "6px",
     color: theme.palette.primary.main,
+  },
+  iconsInst:{
+    color: theme.palette.primary.main,
+    fontSize: "30px",
+    marginLeft:'14px',
+    marginRight:'14px'
+
   },
   iconsCont: {
     marginTop: "24px",
@@ -49,15 +61,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
   },
 
-  firstTypo2: {
-    marginBottom: "1em",
-    color: theme.palette.primary.main,
-    fontWeight: "10px",
-    fontSize: "24px",
-    [theme.breakpoints.down("xs")]: {
-      marginTop: "3em",
-    },
-  },
   firstText: {
     color: theme.palette.primary.main,
     fontFamily:theme.font.primary.main,
@@ -76,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
   otherHeadText: {
     marginTop: "50px",
     color: theme.palette.primary.main,
-    fontSize: "13px",
+    fontSize: "16px",
     fontWeight: "90px",
     fontFamily:theme.font.primary.main,
 
@@ -89,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
   subTypo:{
     paddingBottom:'7px',
     fontFamily:theme.font.primary.main,
-
+    fontSize:'12px',
       letterSpacing:'1px'
   },
   prodTypo: {
@@ -124,6 +127,11 @@ const defaultProps = {
 const Footer = (props) => {
   const classes = useStyles();
   const theme = useTheme();
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
@@ -136,6 +144,10 @@ const Footer = (props) => {
           justify="space-between"
           alignItems={matchesXS ? "center" : ""}
           style={{ marginBottom: "50px" }}
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="500"
         >
           <Grid item>
             <Typography variant="h6" className={classes.firstText}>
@@ -209,10 +221,12 @@ const Footer = (props) => {
               </Typography>
             </div>
             <div className={classes.iconsCont}>
-              <FacebookIcon className={classes.icons} />
-              <InstagramIcon className={classes.icons} />
-              <TwitterIcon className={classes.icons} />
+              <FontAwesomeIcon icon={faFacebookF} className={classes.icons}/>
+              <FontAwesomeIcon icon={faInstagram} className={classes.iconsInst}/>
+              <FontAwesomeIcon icon={faTwitter} className={classes.icons}/>
+
             </div>
+
           </Grid>
         </Grid>
       </Container>

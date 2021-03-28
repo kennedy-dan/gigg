@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Grid, Typography, Card, Button } from "@material-ui/core";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
 import firstbg from "../../assets/firstbbg.jpg";
 import Header from "./Header";
+import "aos/dist/aos.css";
+import Aos from "aos";
+
 /**
  * @author
  * @function FirstBaground
@@ -37,11 +40,11 @@ const useStyles = makeStyles((theme) => ({
   },
   typo: {
     fontSize: "14px",
-    letterSpacing:'0.5px',
-    fontFamily:theme.font.primary.main,
+    letterSpacing: "0.5px",
+    fontFamily: theme.font.primary.main,
 
-    [theme.breakpoints.down('xs')] : {
-      fontSize: '9px'
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "9px",
     },
     marginTop: "",
   },
@@ -49,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "0.1em",
     marginBottom: "0.1em",
     boxShadow: "none",
-    fontFamily:theme.font.primary.main,
+    fontFamily: theme.font.primary.main,
 
     // marginRight: '0.5em'
   },
@@ -58,11 +61,11 @@ const useStyles = makeStyles((theme) => ({
   },
   mainText: {
     fontSize: "42px",
-    fontFamily:theme.font.primary.main,
-    letterSpacing:'0.8px',
-    fontWeight: '3em',
-    [theme.breakpoints.down('sm')]: {
-      fontSize:'2.6em'
+    fontFamily: theme.font.primary.main,
+    letterSpacing: "0.8px",
+    fontWeight: "3em",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2.6em",
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: "1.6em",
@@ -71,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
   subTypo: {
     fontSize: "16px",
     textAlign: "center",
-    fontFamily:theme.font.primary.main,
+    fontFamily: theme.font.primary.main,
     width: "40%",
     [theme.breakpoints.down("sm")]: {
       width: "70%",
@@ -82,8 +85,8 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     width: "50em",
-    [theme.breakpoints.down('sm')]: {
-      width:'38em'
+    [theme.breakpoints.down("sm")]: {
+      width: "38em",
     },
     [theme.breakpoints.down("xs")]: {
       width: "90%",
@@ -91,34 +94,48 @@ const useStyles = makeStyles((theme) => ({
   },
   cardGrid: {
     // marginTop: "0.9em", marginBottom: "0.5em"
-    paddingTop: '1em',
-    paddingBottom:'1em',
-    [theme.breakpoints.down('xs')] :{
-      paddingLeft: '1em',
-      paddingRight: '1em' 
-    }
+    paddingTop: "1em",
+    paddingBottom: "1em",
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: "1em",
+      paddingRight: "1em",
+    },
   },
   ImageText: {
     // position: "absolute",
     // marginTop: "4em",
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down("xs")]: {
       // marginTop:'9em'
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       // marginTop:'7em'
-    }
+    },
   },
 }));
 
 const FirstBaground = (props) => {
+  useEffect(() => {
+    Aos.init()
+  }, []);
   const classes = useStyles();
   return (
     <Grid container className={classes.bg}>
       <Grid container className={classes.cont}>
         <Header />
-        <Grid item container direction='column' justify='center' style={{}}  className={classes.ImageText} >
-          <Grid justify="center" container className={classes.header} >
-            <Grid item container justify="center" alignItems='center'>
+        <Grid
+          item
+          container
+          direction="column"
+          justify="center"
+          style={{}}
+          className={classes.ImageText}
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="500"
+        >
+          <Grid justify="center" container className={classes.header}>
+            <Grid item container justify="center" alignItems="center">
               <Typography style={{}} className={classes.mainText}>
                 Find A work Space That Makes
               </Typography>
@@ -142,7 +159,7 @@ const FirstBaground = (props) => {
                 container
                 justify="space-evenly"
                 className={classes.cardGrid}
-                style={{  }}
+                style={{}}
               >
                 <Grid item className={classes.cardItem}>
                   <Typography className={classes.typo}>
@@ -172,7 +189,7 @@ const FirstBaground = (props) => {
                   </Typography>
                   <Typography className={classes.typo}>Lorem ipsum</Typography>
                 </Grid>
-                <Grid item >
+                <Grid item>
                   <Button
                     variant="contained"
                     color="secondary"

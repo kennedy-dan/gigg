@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Button,
   Grid,
@@ -13,6 +13,8 @@ import bg1 from "../../assets/section1bg.jpg";
 import bg3 from "../../assets/section2bg.jpg";
 import bg4 from "../../assets/section3bg.jpg";
 import bg5 from "../../assets/section1bg.jpg";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 /**
  * @author
@@ -130,6 +132,7 @@ const useStyles = makeStyles((theme) => ({
     width: "80%",
     // marginTop:'-95px',
     alignSelf: "center",
+    fontSize: "16px",
 
     "& h6": {
       fontWeight: "bolder",
@@ -141,6 +144,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "-5px",
       fontWeight: "lighter",
       // fontFamily:'Roboto',
+      fontSize: "14px",
       fontFamily: theme.font.primary.main,
 
       letterSpacing: "0.5px",
@@ -161,6 +165,10 @@ const useStyles = makeStyles((theme) => ({
 const SecondSection = (props) => {
   const classes = useStyles();
   const theme = useTheme();
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
@@ -215,7 +223,14 @@ const SecondSection = (props) => {
         justify={matchesXS ? "center" : "space-between"}
         style={{ marginBottom: "5em", padding: "0 !important" }}
       >
-        <Grid item>
+        <Grid
+          item
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="400"
+          // data-aos-delay='100'
+        >
           <Grid
             item
             container
@@ -237,7 +252,15 @@ const SecondSection = (props) => {
           </Grid>
         </Grid>
 
-        <Grid item>
+        <Grid
+          item
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="400"
+          data-aos-delay='300'
+
+        >
           <Grid
             item
             container
@@ -259,7 +282,15 @@ const SecondSection = (props) => {
           </Grid>
         </Grid>
 
-        <Grid item>
+        <Grid
+          item
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="400"
+          data-aos-delay='400'
+
+        >
           <Grid
             item
             container
