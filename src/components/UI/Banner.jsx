@@ -63,6 +63,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       // paddingTop: "5em",
     },
+    [theme.breakpoints.down("xs")]: {
+      fontSize:'16px'
+    },
   },
   secondTypo: {
     fontSize: "16px",
@@ -73,6 +76,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       textAlign: "center",
+      fontSize:'14px'
     },
     letterSpacing: "0.3px",
   },
@@ -86,6 +90,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "0.3px",
     [theme.breakpoints.down("xs")]: {
       textAlign: "center",
+      fontSize:'12px',
       width: "100%",
     },
   },
@@ -104,18 +109,85 @@ const Banner = (props) => {
 
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
-  return (
-    <Grid container direction="column" className={classes.mainContainer}>
-      <Container>
-        <Grid item container direction="column">
-          <Grid item container justify={matchesXS ? "center" : ""}>
+  const bannerXS = (
+    <React.Fragment>
+       <Grid item container justify={matchesXS ? "center" : ""}>
+            <Typography
+              style={{ marginTop: "3em" }}
+              className={classes.firstTypo}
+              data-aos="zoom-in"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="600"
+            >
+              Featured Plants
+            </Typography>
+          </Grid>
+          <Grid
+            container
+            // justify="space-between"
+            className={classes.rowCont}
+            alignItems="center"
+            // direction={matchesXS ? 'column' : 'row'}
+            justify={matchesXS ? "center" : ""}
+          >
+            <Grid item direction="column" sm>
+              <div
+                data-aos="zoom-in"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="600"
+              >
+                <Typography color="secondary" className={classes.secondTypo}>
+                  Lorem Ipsum
+                </Typography>
+                <Typography
+                  style={{}}
+                  color="secondary"
+                  className={classes.thirdTypo}
+                  variant="body1"
+                >
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sapiente dolore perspiciatis id assumenda, vero, nesciunt
+                  perferendis eveniet qui ea sequi rerum magni iure aspernatur
+                  unde doloribus illum illo distinctio modi? Lorem ipsum dolor
+                  sit amet consectetur, adipisicing elit. Harum vitae rem
+                  expedita nobis omnis consectetur assumenda reprehenderit,
+                  nostrum dignissimos explicabo? Aliquam temporibus, soluta
+                  sapiente ut facilis autem non ea fugiat!
+                </Typography>
+                <Grid item container justify={matchesXS ? "center" : ""}>
+                  <Button variant="contained" className={classes.btn}>
+                    Lorem
+                  </Button>
+                </Grid>
+              </div>
+            </Grid>
+            <Grid
+              item
+              style={{}}
+              sm
+              data-aos="zoom-in"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="600"
+            >
+              <img src={banner} className={classes.bannerbg} />
+            </Grid>
+          </Grid>
+    </React.Fragment>
+  )  
+
+  const bannerLG = (
+    <React.Fragment>
+       <Grid item container justify={matchesXS ? "center" : ""}>
             <Typography
               style={{ marginTop: "3em" }}
               className={classes.firstTypo}
               data-aos="fade-left"
               data-aos-offset="200"
               data-aos-easing="ease-in-sine"
-              data-aos-duration="400"
+              data-aos-duration="600"
             >
               Featured Plants
             </Typography>
@@ -133,7 +205,7 @@ const Banner = (props) => {
                 data-aos="fade-left"
                 data-aos-offset="200"
                 data-aos-easing="ease-in-sine"
-                data-aos-duration="400"
+                data-aos-duration="600"
               >
                 <Typography color="secondary" className={classes.secondTypo}>
                   Lorem Ipsum
@@ -167,11 +239,19 @@ const Banner = (props) => {
               data-aos="fade-right"
               data-aos-offset="200"
               data-aos-easing="ease-in-sine"
-              data-aos-duration="400"
+              data-aos-duration="600"
             >
               <img src={banner} className={classes.bannerbg} />
             </Grid>
           </Grid>
+    </React.Fragment>
+  )
+
+  return (
+    <Grid container direction="column" className={classes.mainContainer}>
+      <Container>
+        <Grid item container direction="column">
+          {matchesXS ? bannerXS : bannerLG}
         </Grid>
       </Container>
     </Grid>

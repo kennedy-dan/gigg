@@ -109,6 +109,7 @@ const useStyles = makeStyles((theme) => ({
 
   firstSubtext: {
     fontFamily:theme.font.primary.main,
+    fontSize:'12px',
 
       letterSpacing:'1px'
     // marginTop:'30px',

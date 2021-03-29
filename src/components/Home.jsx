@@ -75,6 +75,9 @@ const useStyles = makeStyles((theme) => ({
 
       letterSpacing: "0.7px",
       fontSize: "16px",
+      [theme.breakpoints.down('xs')]:{
+        fontSize:"14px"
+      }
     },
     "& p": {
       marginTop: "-5px",
@@ -83,6 +86,9 @@ const useStyles = makeStyles((theme) => ({
 
       letterSpacing: "0.2px",
       fontSize: "14px",
+      [theme.breakpoints.down('xs')]:{
+        fontSize:"12px"
+      }
     },
   },
   cont: {
@@ -118,6 +124,7 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: theme.font.primary.main,
       [theme.breakpoints.down("xs")]: {
         textAlign: "center",
+        fontSize:'12px'
       },
     }
   },
@@ -174,6 +181,9 @@ const useStyles = makeStyles((theme) => ({
   fontSize: {
     fontSize: "24px",
     fontFamily: theme.font.primary.main,
+    [theme.breakpoints.down('xs')]:{
+      fontSize:'18px'
+    }
   },
   wrapper: {
     backgroundColor: "black",
@@ -191,6 +201,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "12px",
     boxShadow: "none",
     fontFamily: theme.font.primary.main,
+    [theme.breakpoints.down('xs')]:{
+      fontSize:'10px'
+    }
 
     // marginLeft: '28em'
   },
@@ -298,7 +311,7 @@ const Home = (props) => {
             data-aos="zoom-out"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
-            data-aos-duration="300"
+            data-aos-duration="600"
             // data-aos-delay='100'
           >
             <Grid
@@ -326,7 +339,7 @@ const Home = (props) => {
             data-aos="zoom-out"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
-            data-aos-duration="300"
+            data-aos-duration="600"
             data-aos-delay="200"
           >
             <Grid
@@ -355,7 +368,7 @@ const Home = (props) => {
             data-aos="zoom-out"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
-            data-aos-duration="300"
+            data-aos-duration="600"
             data-aos-delay="400"
           >
             <Grid
@@ -383,7 +396,7 @@ const Home = (props) => {
             data-aos="zoom-out"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
-            data-aos-duration="300"
+            data-aos-duration="600"
             data-aos-delay="500"
           >
             <Grid

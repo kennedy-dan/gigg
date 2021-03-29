@@ -77,6 +77,9 @@ const useStyles = makeStyles((theme) => ({
   mainText: {
     fontSize: "24px",
     fontFamily: theme.font.primary.main,
+    [theme.breakpoints.down('xs')]:{
+      fontSize:'18px'
+    }
   },
   box: {
     width: "80%",
@@ -86,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
     height: "9em",
   },
   fontSize: {
-    fontSize: "13px",
+    // fontSize: "13px",
     textAlign: "center",
     marginTop: "0.5em",
     width: "80%",
@@ -96,6 +99,10 @@ const useStyles = makeStyles((theme) => ({
 
       letterSpacing: "0.7px",
       fontSize: "16px",
+      [theme.breakpoints.down("xs")]: {
+        // textAlign: "center",
+        fontSize:'14px'
+      },
     },
     "& p": {
       marginTop: "-5px",
@@ -103,6 +110,10 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: theme.font.primary.main,
       letterSpacing: "0.1px",
       fontSize: "14px",
+      [theme.breakpoints.down("xs")]: {
+        // textAlign: "center",
+        fontSize:'12px'
+      },
     },
   },
   arrowIcon: {
@@ -140,7 +151,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "14px",
     marginTop: "15px",
     marginBottom: "10px",
-    fontFamily: theme.font.primary.main
+    fontFamily: theme.font.primary.main,
+    [theme.breakpoints.down("xs")]: {
+      // textAlign: "center",
+      fontSize:'12px'
+    },
   },
 }));
 
@@ -195,7 +210,7 @@ const FourSteps = (props) => {
             data-aos="zoom-in"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
-            data-aos-duration="400"
+            data-aos-duration="700"
             // data-aos-delay='100'
           >
             <Grid container item justify="center" className={classes.box}>
@@ -228,7 +243,7 @@ const FourSteps = (props) => {
             data-aos="zoom-in"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
-            data-aos-duration="300"
+            data-aos-duration="700"
             data-aos-delay="200"
           >
             <Grid container item justify="center" className={classes.box}>
@@ -260,7 +275,7 @@ const FourSteps = (props) => {
             data-aos="zoom-in"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
-            data-aos-duration="300"
+            data-aos-duration="700"
             data-aos-delay="400"
           >
             <Grid container item justify="center" className={classes.box}>
@@ -294,7 +309,7 @@ const FourSteps = (props) => {
             data-aos="zoom-in"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
-            data-aos-duration="300"
+            data-aos-duration="700"
             data-aos-delay="500"
           >
             <Grid container item justify="center" className={classes.box}>

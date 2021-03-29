@@ -23,14 +23,25 @@ import Aos from "aos";
 
 const useStyles = makeStyles((theme) => ({
   firstsec1: {
-    [theme.breakpoints.down("xs")]: {
-      marginTop: "1em",
-    },
+    "& p": {
+      fontSize: "14px ",
+      letterSpacing: "0.1px",
+
+      // fontWeight:'lighter',
+      fontFamily: theme.font.primary.main,
+      [theme.breakpoints.down("xs")]: {
+        textAlign: "center",
+        fontSize:'12px'
+      },
+    }
   },
   firstText: {
     marginBottom: "15px",
     fontSize: "24px",
     fontFamily: theme.font.primary.main,
+    [theme.breakpoints.down('xs')]:{
+      fontSize:'18px'
+    }
   },
 
   firstsec2: {
@@ -109,12 +120,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "black",
   },
   typoTypes: {
-    fontSize: "14px ",
+    "& p": {
+      fontSize: "14px ",
+      letterSpacing: "0.1px",
 
-    fontFamily: theme.font.primary.main,
-    [theme.breakpoints.down("xs")]: {
-      textAlign: "center",
-    },
+      // fontWeight:'lighter',
+      fontFamily: theme.font.primary.main,
+      [theme.breakpoints.down("xs")]: {
+        textAlign: "center",
+        fontSize:'12px'
+      },
+    }
   },
   btnType: {
     fontSize: "11px",
@@ -130,27 +146,28 @@ const useStyles = makeStyles((theme) => ({
   caption: {
     textAlign: "center",
     width: "80%",
-    // marginTop:'-95px',
-    alignSelf: "center",
-    fontSize: "16px",
+    paddingTop: "10px",
 
     "& h6": {
       fontWeight: "bolder",
-      // fontFamily:'Roboto',
-      letterSpacing: "0.7px",
       fontFamily: theme.font.primary.main,
+
+      letterSpacing: "0.7px",
+      fontSize: "16px",
+      [theme.breakpoints.down('xs')]:{
+        fontSize:"14px"
+      }
     },
     "& p": {
       marginTop: "-5px",
       // fontWeight: "lighter",
-      // fontFamily:'Roboto',
-      fontSize: "14px",
       fontFamily: theme.font.primary.main,
 
-      letterSpacing: "0.5px",
-    },
-    [theme.breakpoints.up("md")]: {
-      // paddingTop: '125px'
+      letterSpacing: "0.2px",
+      fontSize: "14px",
+      [theme.breakpoints.down('xs')]:{
+        fontSize:"12px"
+      }
     },
   },
   subText: {
@@ -198,10 +215,10 @@ const SecondSection = (props) => {
           alignItems={matchesXS ? "center" : null}
         >
           <Grid item className={classes.firstsec1}>
-            <Typography className={classes.typoTypes}>
+            <Typography>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             </Typography>
-            <Typography className={classes.typoTypes}>
+            <Typography>
               Lorem ipsum dolor sit amet, cons
             </Typography>
           </Grid>
@@ -228,7 +245,7 @@ const SecondSection = (props) => {
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
-          data-aos-duration="400"
+          data-aos-duration="1000"
           // data-aos-delay='100'
         >
           <Grid
@@ -257,7 +274,7 @@ const SecondSection = (props) => {
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
-          data-aos-duration="400"
+          data-aos-duration="1000"
           data-aos-delay='300'
 
         >
@@ -287,7 +304,7 @@ const SecondSection = (props) => {
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
-          data-aos-duration="400"
+          data-aos-duration="1000"
           data-aos-delay='400'
 
         >

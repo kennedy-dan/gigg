@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "2.6em",
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: "1.6em",
+      fontSize: "22px",
     },
   },
   subTypo: {
@@ -81,6 +81,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       width: "80%",
+      fontSize:'14px'
     },
   },
   card: {
