@@ -256,10 +256,15 @@ const Home = (props) => {
           container
           justify={matchesXS ? "center" : "inherit"}
           className={classes.subText}
+          
         >
           <Typography
             variant={matchesSM ? "" : ""}
             className={classes.fontSize}
+            data-aos="zoom-out"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="600"
           >
             <b>
               Types of <span style={{ color: "#9cf744" }}> Work </span>
@@ -275,8 +280,12 @@ const Home = (props) => {
             justify={matchesXS ? "center" : "space-between"}
             className={classes.subText2}
             alignItems={matchesXS ? "center" : null}
+           
           >
-            <Grid item className={classes.firstsec1}>
+            <Grid item className={classes.firstsec1}  data-aos="zoom-out"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="600">
               <Typography >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               </Typography>
@@ -284,7 +293,10 @@ const Home = (props) => {
                 Lorem ipsum dolor sit amet, cons
               </Typography>
             </Grid>
-            <Grid item className={classes.firstsec2}>
+            <Grid item className={classes.firstsec2}  data-aos="zoom-out"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="600">
               <Button
                 variant="contained"
                 color="secondary"

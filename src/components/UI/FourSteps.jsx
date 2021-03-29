@@ -77,9 +77,9 @@ const useStyles = makeStyles((theme) => ({
   mainText: {
     fontSize: "24px",
     fontFamily: theme.font.primary.main,
-    [theme.breakpoints.down('xs')]:{
-      fontSize:'18px'
-    }
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "18px",
+    },
   },
   box: {
     width: "80%",
@@ -101,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "16px",
       [theme.breakpoints.down("xs")]: {
         // textAlign: "center",
-        fontSize:'14px'
+        fontSize: "14px",
       },
     },
     "& p": {
@@ -112,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "14px",
       [theme.breakpoints.down("xs")]: {
         // textAlign: "center",
-        fontSize:'12px'
+        fontSize: "12px",
       },
     },
   },
@@ -154,7 +154,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: theme.font.primary.main,
     [theme.breakpoints.down("xs")]: {
       // textAlign: "center",
-      fontSize:'12px'
+      fontSize: "12px",
     },
   },
 }));
@@ -181,13 +181,29 @@ const FourSteps = (props) => {
   return (
     <Container className={classes.secondSection}>
       <Grid container direction="column" style={{ marginTop: "9em" }}>
-        <Grid item container justify="center">
-          <Typography variant="h5" className={classes.mainText}>
+        <Grid
+          item
+          container
+          justify="center"
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="700"
+        >
+          <Typography variant="h5" className={classes.mainText} item>
             <b>4 easy</b> <span style={{ color: "#9cf744" }}>steps</span>{" "}
             <b>to book</b>
           </Typography>
         </Grid>
-        <Grid item container justify="center">
+        <Grid
+          item
+          container
+          justify="center"
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="700"
+        >
           <Typography className={classes.secondTypo}>
             Lorem ipsum dolor sit amet
           </Typography>
@@ -230,9 +246,16 @@ const FourSteps = (props) => {
               <Typography>Lorem ipsum, dolor sit amet consectetur</Typography>
             </Grid>
           </Grid>
-
-          <ArrowRightAltIcon className={classes.arrowIcon} />
-          <ArrowDownwardIcon className={classes.downArrowIcon} />
+          <div
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="700"
+            // data-aos-delay="200"
+          >
+            <ArrowRightAltIcon className={classes.arrowIcon} />
+            <ArrowDownwardIcon className={classes.downArrowIcon} />
+          </div>
 
           <Grid
             item
@@ -263,8 +286,16 @@ const FourSteps = (props) => {
               <Typography>Lorem ipsum, dolor sit amet consectetur</Typography>
             </Grid>
           </Grid>
-          <ArrowRightAltIcon className={classes.arrowIcon} />
-          <ArrowDownwardIcon className={classes.downArrowIcon} />
+          <div
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="700"
+            data-aos-delay="200"
+          >
+            <ArrowRightAltIcon className={classes.arrowIcon} />
+            <ArrowDownwardIcon className={classes.downArrowIcon} />
+          </div>
 
           <Grid
             item
@@ -296,8 +327,16 @@ const FourSteps = (props) => {
               <Typography>Lorem ipsum, dolor sit amet consectetur</Typography>
             </Grid>
           </Grid>
-          <ArrowRightAltIcon className={classes.arrowIcon} />
-          <ArrowDownwardIcon className={classes.downArrowIcon} />
+          <div
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="700"
+            data-aos-delay="400"
+          >
+            <ArrowRightAltIcon className={classes.arrowIcon} />
+            <ArrowDownwardIcon className={classes.downArrowIcon} />
+          </div>
 
           <Grid
             item

@@ -31,17 +31,17 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: theme.font.primary.main,
       [theme.breakpoints.down("xs")]: {
         textAlign: "center",
-        fontSize:'12px'
+        fontSize: "12px",
       },
-    }
+    },
   },
   firstText: {
     marginBottom: "15px",
     fontSize: "24px",
     fontFamily: theme.font.primary.main,
-    [theme.breakpoints.down('xs')]:{
-      fontSize:'18px'
-    }
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "18px",
+    },
   },
 
   firstsec2: {
@@ -128,9 +128,9 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: theme.font.primary.main,
       [theme.breakpoints.down("xs")]: {
         textAlign: "center",
-        fontSize:'12px'
+        fontSize: "12px",
       },
-    }
+    },
   },
   btnType: {
     fontSize: "11px",
@@ -154,9 +154,9 @@ const useStyles = makeStyles((theme) => ({
 
       letterSpacing: "0.7px",
       fontSize: "16px",
-      [theme.breakpoints.down('xs')]:{
-        fontSize:"14px"
-      }
+      [theme.breakpoints.down("xs")]: {
+        fontSize: "14px",
+      },
     },
     "& p": {
       marginTop: "-5px",
@@ -165,9 +165,9 @@ const useStyles = makeStyles((theme) => ({
 
       letterSpacing: "0.2px",
       fontSize: "14px",
-      [theme.breakpoints.down('xs')]:{
-        fontSize:"12px"
-      }
+      [theme.breakpoints.down("xs")]: {
+        fontSize: "12px",
+      },
     },
   },
   subText: {
@@ -198,7 +198,15 @@ const SecondSection = (props) => {
         justify={matchesXS ? "center" : "inherit"}
         className={classes.subText}
       >
-        <Typography variant={matchesSM ? "" : ""} className={classes.firstText}>
+        <Typography
+          variant={matchesSM ? "" : ""}
+          className={classes.firstText}
+          data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1000"
+          // data-aos-delay="200"
+        >
           <b>
             Types of <span style={{ color: "#9cf744" }}> Work </span>
             Space Available{" "}
@@ -214,15 +222,29 @@ const SecondSection = (props) => {
           style={{ marginBottom: "2em" }}
           alignItems={matchesXS ? "center" : null}
         >
-          <Grid item className={classes.firstsec1}>
+          <Grid
+            item
+            className={classes.firstsec1}
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="1000"
+            // data-aos-delay="200"
+          >
             <Typography>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             </Typography>
-            <Typography>
-              Lorem ipsum dolor sit amet, cons
-            </Typography>
+            <Typography>Lorem ipsum dolor sit amet, cons</Typography>
           </Grid>
-          <Grid item className={classes.firstsec2}>
+          <Grid
+            item
+            className={classes.firstsec2}
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="1000"
+            // data-aos-delay="400"
+          >
             <Button
               variant="contained"
               color="secondary"
@@ -275,8 +297,7 @@ const SecondSection = (props) => {
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
           data-aos-duration="1000"
-          data-aos-delay='300'
-
+          data-aos-delay="300"
         >
           <Grid
             item
@@ -305,8 +326,7 @@ const SecondSection = (props) => {
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
           data-aos-duration="1000"
-          data-aos-delay='400'
-
+          data-aos-delay="400"
         >
           <Grid
             item
