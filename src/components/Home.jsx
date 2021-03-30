@@ -75,9 +75,9 @@ const useStyles = makeStyles((theme) => ({
 
       letterSpacing: "0.7px",
       fontSize: "16px",
-      [theme.breakpoints.down('xs')]:{
-        fontSize:"14px"
-      }
+      [theme.breakpoints.down("xs")]: {
+        fontSize: "14px",
+      },
     },
     "& p": {
       marginTop: "-5px",
@@ -86,9 +86,9 @@ const useStyles = makeStyles((theme) => ({
 
       letterSpacing: "0.2px",
       fontSize: "14px",
-      [theme.breakpoints.down('xs')]:{
-        fontSize:"12px"
-      }
+      [theme.breakpoints.down("xs")]: {
+        fontSize: "12px",
+      },
     },
   },
   cont: {
@@ -124,9 +124,9 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: theme.font.primary.main,
       [theme.breakpoints.down("xs")]: {
         textAlign: "center",
-        fontSize:'12px'
+        fontSize: "12px",
       },
-    }
+    },
   },
   firstsec2: {
     [theme.breakpoints.down("xs")]: {
@@ -181,9 +181,9 @@ const useStyles = makeStyles((theme) => ({
   fontSize: {
     fontSize: "24px",
     fontFamily: theme.font.primary.main,
-    [theme.breakpoints.down('xs')]:{
-      fontSize:'18px'
-    }
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "18px",
+    },
   },
   wrapper: {
     backgroundColor: "black",
@@ -192,9 +192,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "12px",
     boxShadow: "none",
     fontFamily: theme.font.primary.main,
-    [theme.breakpoints.down('xs')]:{
-      fontSize:'10px'
-    }
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "10px",
+    },
 
     // marginLeft: '28em'
   },
@@ -247,19 +247,18 @@ const Home = (props) => {
           container
           justify={matchesXS ? "center" : "inherit"}
           className={classes.subText}
-          
         >
           <Typography
             variant={matchesSM ? "" : ""}
             className={classes.fontSize}
-            data-aos="zoom-out"
+            data-aos={matchesXS ? "zoom-in" : "zoom-out"}
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
             data-aos-duration="600"
           >
             <b>
               Various <span style={{ color: "#9cf744" }}> Categories </span>
-               Available{" "}
+              Available{" "}
             </b>
           </Typography>
 
@@ -271,23 +270,28 @@ const Home = (props) => {
             justify={matchesXS ? "center" : "space-between"}
             className={classes.subText2}
             alignItems={matchesXS ? "center" : null}
-           
           >
-            <Grid item className={classes.firstsec1}  data-aos="zoom-out"
-            data-aos-offset="200"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="600">
-              <Typography >
+            <Grid
+              item
+              className={classes.firstsec1}
+              data-aos={matchesXS ? "zoom-in" : "zoom-out"}
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="600"
+            >
+              <Typography>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               </Typography>
-              <Typography >
-                Lorem ipsum dolor sit amet, cons
-              </Typography>
+              <Typography>Lorem ipsum dolor sit amet, cons</Typography>
             </Grid>
-            <Grid item className={classes.firstsec2}  data-aos="zoom-out"
-            data-aos-offset="200"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="600">
+            <Grid
+              item
+              className={classes.firstsec2}
+              data-aos={matchesXS ? "zoom-in" : "zoom-out"}
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="600"
+            >
               <Button
                 variant="contained"
                 color="secondary"
@@ -311,7 +315,7 @@ const Home = (props) => {
         >
           <Grid
             item
-            data-aos="zoom-out"
+            data-aos={matchesXS ? "zoom-in" : "zoom-out"}
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
             data-aos-duration="600"
@@ -332,14 +336,16 @@ const Home = (props) => {
               </Grid>
               <div className={classes.caption}>
                 <h6>Accomodation</h6>
-                <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing</Typography>
+                <Typography>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing
+                </Typography>
               </div>
             </Grid>
           </Grid>
 
           <Grid
             item
-            data-aos="zoom-out"
+            data-aos={matchesXS ? "zoom-in" : "zoom-out"}
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
             data-aos-duration="600"
@@ -360,15 +366,16 @@ const Home = (props) => {
               </Grid>
               <div className={classes.caption}>
                 <h6>Blog</h6>
-                <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing</Typography>
-
+                <Typography>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing
+                </Typography>
               </div>
             </Grid>
           </Grid>
 
           <Grid
             item
-            data-aos="zoom-out"
+            data-aos={matchesXS ? "zoom-in" : "zoom-out"}
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
             data-aos-duration="600"
@@ -389,14 +396,15 @@ const Home = (props) => {
               </Grid>
               <div className={classes.caption}>
                 <h6>Advertize</h6>
-                <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing</Typography>
-
+                <Typography>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing
+                </Typography>
               </div>
             </Grid>
           </Grid>
           <Grid
             item
-            data-aos="zoom-out"
+            data-aos={matchesXS ? "zoom-in" : "zoom-out"}
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
             data-aos-duration="600"
@@ -417,8 +425,9 @@ const Home = (props) => {
               </Grid>
               <div className={classes.caption}>
                 <h6>Promotions</h6>
-                <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing</Typography>
-
+                <Typography>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing
+                </Typography>
               </div>
             </Grid>
           </Grid>

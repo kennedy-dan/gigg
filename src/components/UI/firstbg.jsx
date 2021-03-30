@@ -68,7 +68,8 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "2.6em",
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: "18px",
+      textAlign:'center',
+      fontSize: "22px",
     },
   },
   subTypo: {
@@ -138,11 +139,10 @@ const FirstBaground = (props) => {
           <Grid justify="center" container className={classes.header}>
             <Grid item container justify="center" alignItems="center">
               <Typography style={{}} className={classes.mainText}>
-                Find Anything You want To Purchase 
+                Find Anything You want To Purchase on Neeoe 
               </Typography>
             </Grid>
             <Typography className={classes.mainText}>
-              On Neooe
             </Typography>
           </Grid>
           <Grid item container justify="center" className={classes.header2}>
