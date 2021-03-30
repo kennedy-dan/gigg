@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "2.6em",
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: "22px",
+      fontSize: "18px",
     },
   },
   subTypo: {
