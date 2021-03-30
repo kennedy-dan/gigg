@@ -208,8 +208,8 @@ const SecondSection = (props) => {
           // data-aos-delay="200"
         >
           <b>
-            Types of <span style={{ color: "#9cf744" }}> Work </span>
-            Space Available{" "}
+            Got <span style={{ color: "#9cf744" }}> Something </span>
+            To Sell?{" "}
           </b>
         </Typography>
 
@@ -278,11 +278,11 @@ const SecondSection = (props) => {
           >
             <Grid container item className={classes.cont}>
               <Grid container justify="center" alignItems="center">
-                <Typography>Accomodation</Typography>
+                {/* <Typography>Accomodation</Typography> */}
               </Grid>
             </Grid>
             <div className={classes.caption}>
-              <h6>Meeting room</h6>
+              <h6>Products</h6>
               <Typography>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
                 illum minima
@@ -307,11 +307,11 @@ const SecondSection = (props) => {
           >
             <Grid container item className={classes.cont}>
               <Grid container justify="center" alignItems="center">
-                <Typography>Accomodation</Typography>
+                {/* <Typography>Accomodation</Typography> */}
               </Grid>
             </Grid>
             <div className={classes.caption}>
-              <h6>Meeting room</h6>
+              <h6>Blog</h6>
               <Typography>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
                 illum minima
@@ -336,13 +336,13 @@ const SecondSection = (props) => {
           >
             <Grid container item className={classes.cont}>
               <Grid container justify="center" alignItems="center">
-                <Typography className={classes.hoverTypo}>
+                {/* <Typography className={classes.hoverTypo}>
                   Accomodation
-                </Typography>
+                </Typography> */}
               </Grid>
             </Grid>
             <div className={classes.caption}>
-              <h6>Meeting room</h6>
+              <h6>Goods & Services</h6>
               <Typography>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad,
                 illum minima

@@ -188,15 +188,6 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     backgroundColor: "black",
   },
-  typoTypes: {
-    // fontSize: "14px ",
-    // // fontWeight:'1px',
-    // fontFamily: theme.font.primary.main,
-    // [theme.breakpoints.down("xs")]: {
-    //   textAlign: "center",
-    // },
-    // letterSpacing: "0.1px",
-  },
   btnType: {
     fontSize: "12px",
     boxShadow: "none",
@@ -267,8 +258,8 @@ const Home = (props) => {
             data-aos-duration="600"
           >
             <b>
-              Types of <span style={{ color: "#9cf744" }}> Work </span>
-              Space Available{" "}
+              Various <span style={{ color: "#9cf744" }}> Categories </span>
+               Available{" "}
             </b>
           </Typography>
 
@@ -340,7 +331,7 @@ const Home = (props) => {
                 </Grid>
               </Grid>
               <div className={classes.caption}>
-                <h6>Meeting room</h6>
+                <h6>Accomodation</h6>
                 <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing</Typography>
               </div>
             </Grid>
@@ -368,7 +359,7 @@ const Home = (props) => {
                 </Grid>
               </Grid>
               <div className={classes.caption}>
-                <h6>Meeting room</h6>
+                <h6>Blog</h6>
                 <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing</Typography>
 
               </div>
@@ -397,7 +388,7 @@ const Home = (props) => {
                 </Grid>
               </Grid>
               <div className={classes.caption}>
-                <h6>Meeting room</h6>
+                <h6>Advertize</h6>
                 <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing</Typography>
 
               </div>
@@ -425,7 +416,7 @@ const Home = (props) => {
                 </Grid>
               </Grid>
               <div className={classes.caption}>
-                <h6>Meeting room</h6>
+                <h6>Promotions</h6>
                 <Typography>Lorem ipsum, dolor sit amet consectetur adipisicing</Typography>
 
               </div>

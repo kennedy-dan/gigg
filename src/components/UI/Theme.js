@@ -3,8 +3,12 @@ import { createMuiTheme } from '@material-ui/core/styles';
 const blueTheme = '#197519'
 const whiteTheme = '#FFFFFF'
 const darkWhite ='#afafaf'
-const lightGreen = '#f9fbf9'
+const orange ='#FFBA60'
+// const lightGreen = '#f9fbf9'
 const fontFamily = 'Raleway'
+const lightGreen = '#f9fbf9'
+// const blueTheme = '#197519'
+
 
 export default createMuiTheme ({
     palette: {
@@ -26,6 +30,9 @@ export default createMuiTheme ({
         },
         banner: {
             main :`${lightGreen}`
+        },
+        preSec: {
+            main: `${orange}`
         }
     },
     font: {

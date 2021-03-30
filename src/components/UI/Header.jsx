@@ -229,13 +229,13 @@ export default function Header() {
               className={`${classes.tab} ${
                 trigger === false ? "" : classes.tabScrolled
               }`}
-              label="Home"
+              label="Blog"
             />
             <Tab
               className={`${classes.tab} ${
                 trigger === false ? "" : classes.tabScrolled
               }`}
-              label="Contacts"
+              label="Events"
             />
             <Tab
               className={`${classes.tab} ${

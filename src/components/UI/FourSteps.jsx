@@ -12,6 +12,11 @@ import { fade, makeStyles } from "@material-ui/core/styles";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import CreditCardIcon from '@material-ui/icons/CreditCard';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faAd} from "@fortawesome/free-solid-svg-icons"
+
 import "aos/dist/aos.css";
 import Aos from "aos";
 
@@ -192,7 +197,7 @@ const FourSteps = (props) => {
         >
           <Typography variant="h5" className={classes.mainText} item>
             <b>4 easy</b> <span style={{ color: "#9cf744" }}>steps</span>{" "}
-            <b>to book</b>
+            <b>To Sell Your Products</b> 
           </Typography>
         </Grid>
         <Grid
@@ -242,7 +247,7 @@ const FourSteps = (props) => {
               className={classes.fontSize}
               justify="center"
             >
-              <h6>Meeting</h6>
+              <h6>Create Account</h6>
               <Typography>Lorem ipsum, dolor sit amet consectetur</Typography>
             </Grid>
           </Grid>
@@ -272,7 +277,7 @@ const FourSteps = (props) => {
             <Grid container item justify="center" className={classes.box}>
               <Box borderRadius={20} {...defaultProps}>
                 {" "}
-                <AccountCircleIcon className={classes.accIcon} />{" "}
+                <AddShoppingCartIcon className={classes.accIcon} />{" "}
               </Box>
             </Grid>
             <Grid
@@ -282,7 +287,7 @@ const FourSteps = (props) => {
               className={classes.fontSize}
               justify="center"
             >
-              <h6>Meeting</h6>
+              <h6>Post goods</h6>
               <Typography>Lorem ipsum, dolor sit amet consectetur</Typography>
             </Grid>
           </Grid>
@@ -312,7 +317,9 @@ const FourSteps = (props) => {
             <Grid container item justify="center" className={classes.box}>
               <Box borderRadius={20} {...defaultProps}>
                 {" "}
-                <AccountCircleIcon className={classes.accIcon} />{" "}
+                {/* <AccountCircleIcon className={classes.accIcon} />{" "} */}
+                <FontAwesomeIcon icon={faAd} className={classes.accIcon} />
+
               </Box>
             </Grid>
             <Grid
@@ -323,7 +330,7 @@ const FourSteps = (props) => {
               className={classes.fontSize}
               justify="center"
             >
-              <h6>Meeting</h6>
+              <h6>Advertize</h6>
               <Typography>Lorem ipsum, dolor sit amet consectetur</Typography>
             </Grid>
           </Grid>
@@ -354,7 +361,7 @@ const FourSteps = (props) => {
             <Grid container item justify="center" className={classes.box}>
               <Box {...defaultProps}>
                 {" "}
-                <AccountCircleIcon className={classes.accIcon} />{" "}
+                <CreditCardIcon className={classes.accIcon} />{" "}
               </Box>
             </Grid>
             <Grid
@@ -365,7 +372,7 @@ const FourSteps = (props) => {
               justify="center"
               className={classes.fontSize}
             >
-              <h6>Meeting</h6>
+              <h6>Sell Products</h6>
               <Typography>Lorem ipsum, dolor sit amet consectetur</Typography>
             </Grid>
           </Grid>

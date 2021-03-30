@@ -46,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
     fontFamily: theme.font.primary.main,
     borderRadius: 0,
+    fontSize:'13px',
+    textTransform:'none',
+
     // fontSize:'16px',
 
     // width:'100%',
@@ -120,7 +123,7 @@ const Banner = (props) => {
               data-aos-easing="ease-in-sine"
               data-aos-duration="600"
             >
-              Featured Plants
+              About Neeoe
             </Typography>
           </Grid>
           <Grid
@@ -158,7 +161,7 @@ const Banner = (props) => {
                 </Typography>
                 <Grid item container justify={matchesXS ? "center" : ""}>
                   <Button variant="contained" className={classes.btn}>
-                    Lorem
+                    Read More
                   </Button>
                 </Grid>
               </div>
@@ -189,7 +192,7 @@ const Banner = (props) => {
               data-aos-easing="ease-in-sine"
               data-aos-duration="600"
             >
-              Featured Plants
+              About Neeoe
             </Typography>
           </Grid>
           <Grid
@@ -227,7 +230,7 @@ const Banner = (props) => {
                 </Typography>
                 <Grid item container justify={matchesXS ? "center" : ""}>
                   <Button variant="contained" className={classes.btn}>
-                    Lorem
+                  Read More
                   </Button>
                 </Grid>
               </div>

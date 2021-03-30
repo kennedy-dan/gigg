@@ -136,7 +136,7 @@ const defaultProps = {
   bgcolor: "white",
   // borderColor: "rgba(0,0,0,0.4)",
   m: 1,
-  border: 1,
+  // border: 1,
   style: { width: "4.3rem", height: "4.3rem" },
 };
 
