@@ -5,6 +5,7 @@ import theme from "./components/UI/Theme";
 import Header from './components/UI/Header'
 import Home from "./components/Home";
 import Footer from "./components/UI/Footer";
+import Signin from "./components/Signin";
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
        {/* <Header /> */}
        <Switch>
          <Route exact path='/' component={Home} />
+         <Route exact path='/signin' component={Signin}/>
        </Switch>
      </Router>
-     <Footer />
+     {/* <Footer /> */}
     </ThemeProvider>
   );
 }

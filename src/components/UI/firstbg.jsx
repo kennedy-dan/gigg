@@ -65,7 +65,9 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "0.8px",
     fontWeight: "3em",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "2.6em",
+      fontSize: "32px",
+      textAlign:'center',
+
     },
     [theme.breakpoints.down("xs")]: {
       textAlign:'center',
@@ -142,8 +144,7 @@ const FirstBaground = (props) => {
                 Find Anything You want To Purchase on Neeoe 
               </Typography>
             </Grid>
-            <Typography className={classes.mainText}>
-            </Typography>
+            
           </Grid>
           <Grid item container justify="center" className={classes.header2}>
             <Grid container item justify="center">
