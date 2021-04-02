@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#fff",
     minHeight: "100vh",
     overflow: "hidden",
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('xs')]:{
       minHeight:'800px',
       height:'100vh'
     },
@@ -61,11 +61,11 @@ const useStyles = makeStyles((theme) => ({
       transform: "translateY(-50%)",
       zIndex: 6,
       transition: "1.8s ease-in-out",
-      [theme.breakpoints.down('sm')]:{
+      [theme.breakpoints.down('xs')]:{
         width:'1500px',
         height:'1500px',
         left:'30%',
-        bottom:'60%',
+        bottom:'68%',
         transform:'translateX(-50%)',
         right:'initial',
         top:'initial',
@@ -95,13 +95,14 @@ const useStyles = makeStyles((theme) => ({
       transition: "1.8s ease-in-out",
       transform: "translate(100%, -50%)",
       right: "52%",
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('xs')]: {
         transform: 'translate(-50%, 100%)',
-        bottom: '32%',
+        bottom: '38%',
         right:'initial',
-        height:'500px',
-        width:'1500px',
-        top:''
+        
+        height:'560px',
+        width:'2000px',
+        // top:'28%'
       }
     
     },
@@ -123,10 +124,10 @@ const useStyles = makeStyles((theme) => ({
     display: "grid",
     gridTemplateColumns: "1fr",
     zIndex: 5,
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('xs')]:{
       width:'100%',
       left:'50%',
-      top:'95%',
+      top:'98%',
       transform: "translate(-50%, -100%)",
     transition: "1s 0.7s ease-in-out",
 
@@ -143,8 +144,9 @@ const useStyles = makeStyles((theme) => ({
     display: "grid",
     gridTemplateColumns: "1fr",
     zIndex: 5,
-    [theme.breakpoints.down('sm')]: {
-      top:'5%',
+    [theme.breakpoints.down('xs')]: {
+      width:'100%',
+      top:'1%',
       transform: 'translate(-50%, 0)',
       left:'50%'
     },
@@ -210,6 +212,12 @@ const useStyles = makeStyles((theme) => ({
     // borderRadius: "99px",
     border: 0,
 
+    [theme.breakpoints.down('xs')]:{
+      fontSize: '60px',
+      marginTop:'-10px'
+      // height:'22px'
+    },
+
     marginBottom: "20px",
     "& .MuiOutlinedInput-notchedOutline": {
       borderColor: theme.palette.secondary.main,
@@ -249,6 +257,9 @@ const useStyles = makeStyles((theme) => ({
 
     padding: "0rem 5rem",
     overflow: "hidden",
+    [theme.breakpoints.down('xs')]:{
+      padding: '0px 1px'
+     },
   },
   iconsCont: {
     display: "flex",
@@ -262,7 +273,7 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     display: "grid",
     gridTemplateColumns: "repeat(2, 1fr)",
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('xs')]:{
 
      gridTemplateColumns:'1fr',
      gridTemplateRows:'1fr 2fr 1fr'
@@ -272,8 +283,8 @@ const useStyles = makeStyles((theme) => ({
   leftImg: {
     width: "100%",
     transition: "transform 1.1s 0.4s ease-in-out",
-    [theme.breakpoints.down('sm')]:{
-      width:'200px',
+    [theme.breakpoints.down('xs')]:{
+      width:'150px',
     transition: "transform 0.9s 0.6s ease-in-out",
 
      },
@@ -283,8 +294,8 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     transition: "transform 1.1s 0.4s ease-in-out",
     transform: "translateX(-800px)",
-    [theme.breakpoints.down('sm')]:{
-      width:'200px',
+    [theme.breakpoints.down('xs')]:{
+      width:'150px',
     transform: "translateY(-300px)",
 
      },
@@ -293,9 +304,9 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     transform: "translateX(800px)",
     transition: "transform 0.9s 0.6s ease-in-out",
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('xs')]:{
      transform:"translateY(300px)",
-     width:'200px',
+     width:'150px',
     transition: "transform 0.9s 0.6s ease-in-out",
 
     },
@@ -305,10 +316,10 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     transform: "translateX(0px)",
     transition: "transform 0.9s 0.6s ease-in-out",
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('xs')]:{
     //  transform:"translateY(300px)",
 
-      width:'200px'
+      width:'150px'
      },
    
   },
@@ -321,7 +332,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     zIndex: 6,
     pointerEvents: "none",
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('xs')]:{
       flexDirection:'row',
       justifyContent:'space-around',
       alignItems: 'center',
@@ -340,7 +351,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     zIndex: 6,
     pointerEvents: "all",
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('xs')]:{
       flexDirection:'row',
       justifyContent:'space-around',
       alignItems: 'center',
@@ -358,7 +369,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     zIndex: 6,
     pointerEvents: "all",
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('xs')]:{
       flexDirection:'row',
       justifyContent:'space-around',
       alignItems: 'center',
@@ -377,7 +388,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     zIndex: 6,
     pointerEvents: "none",
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('xs')]:{
       flexDirection:'row',
       justifyContent:'space-around',
       alignItems: 'center',
@@ -390,7 +401,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
 
     transition: "transform 0.9s 0.6s ease-in-out",
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('xs')]:{
       transform:"translateY(300px)",
      },
   
@@ -400,6 +411,9 @@ const useStyles = makeStyles((theme) => ({
     transform: "translateX(0px)",
     color: theme.palette.primary.main,
     transition: "transform 0.9s 0.6s ease-in-out",
+    [theme.breakpoints.down('xs')]:{
+      fontSize: '5px'
+     },
    
   },
   leftContent: {
@@ -412,7 +426,7 @@ const useStyles = makeStyles((theme) => ({
     transition: "transform 0.9s 0.6s ease-in-out",
     transform: "translateX(-800px)",
     color: theme.palette.primary.main,
-    [theme.breakpoints.down('sm')]:{
+    [theme.breakpoints.down('xs')]:{
     transform: "translateY(-300px)",
 
     }
@@ -424,14 +438,23 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: theme.font.primary.main,
     fontSize: "12px",
     borderRadius: "15px",
+    [theme.breakpoints.down('xs')]:{
+      fontSize: '10px'
+     },
   },
   h3: {
     fontFamily: theme.font.primary.main,
     fontSize: "24px",
+    [theme.breakpoints.down('xs')]:{
+      fontSize: '15px'
+     },
   },
   p: {
     fontFamily: theme.font.primary.main,
     fontSize: "16px",
+    [theme.breakpoints.down('xs')]:{
+      fontSize: '13px'
+     },
   },
   socialP: {
     fontFamily: theme.font.primary.main,
@@ -443,6 +466,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "24px",
     display: "flex",
     textAlign: "center",
+    [theme.breakpoints.down('xs')]:{
+      marginTop:'1px'
+      // fontSize: '10px'
+     },
 
   },
   icons: {
@@ -450,6 +477,9 @@ const useStyles = makeStyles((theme) => ({
     // paddingLeft:"13px",
     // margin:'11.5px',
     marginTop: "8px",
+    [theme.breakpoints.down('xs')]:{
+      // fontSize: '15px'
+     },
 
     color: theme.palette.primary.main,
     // padding:'10px',
