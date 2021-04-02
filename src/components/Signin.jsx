@@ -100,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
         bottom: '38%',
         right:'initial',
         
-        height:'560px',
+        height:'530px',
         width:'2000px',
         // top:'28%'
       }
@@ -609,26 +609,7 @@ const Signin = (props) => {
               <Button variant="contained" className={classes.btn}>
                 Login
               </Button>
-              <p className={classes.socialP}>
-                Or Sign in with social platforms
-              </p>
-              <div container justify="center" className={classes.iconsCont}>
-                <Box borderRadius={50} {...defaultProps}>
-                  <FontAwesomeIcon
-                    icon={faFacebookF}
-                    className={classes.icons}
-                  />
-                </Box>
-                <Box borderRadius={50} {...defaultProps}>
-                  <FontAwesomeIcon
-                    icon={faInstagram}
-                    className={classes.iconsInst}
-                  />
-                </Box>
-                <Box borderRadius={50} {...defaultProps}>
-                  <FontAwesomeIcon icon={faTwitter} className={classes.icons} />
-                </Box>
-              </div>
+           
             </form>
             <form
               action="#"
@@ -728,26 +709,7 @@ const Signin = (props) => {
               />
 
               <Button className={classes.btn}>Login</Button>
-              <p className={classes.socialP}>
-                Or Sign in with social platforms
-              </p>
-              <Grid container justify="center" className={classes.iconsCont}>
-                <Box borderRadius={50} {...defaultProps}>
-                  <FontAwesomeIcon
-                    icon={faFacebookF}
-                    className={classes.icons}
-                  />
-                </Box>
-                <Box borderRadius={50} {...defaultProps}>
-                  <FontAwesomeIcon
-                    icon={faInstagram}
-                    className={classes.iconsInst}
-                  />
-                </Box>
-                <Box borderRadius={50} {...defaultProps}>
-                  <FontAwesomeIcon icon={faTwitter} className={classes.icons} />
-                </Box>
-              </Grid>
+             
             </form>
           </div>
         </div>
