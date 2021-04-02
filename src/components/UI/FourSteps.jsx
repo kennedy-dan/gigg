@@ -196,7 +196,7 @@ const FourSteps = (props) => {
           data-aos-duration="700"
         >
           <Typography variant="h5" className={classes.mainText} item>
-            <b>4 easy</b> <span style={{ color: "#9cf744" }}>steps</span>{" "}
+            <b>4 Easy</b> <span style={{ color: "#9cf744" }}>Steps</span>{" "}
             <b>To Sell Your Products</b> 
           </Typography>
         </Grid>

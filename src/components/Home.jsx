@@ -18,6 +18,7 @@ import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import FourSteps from "./UI/FourSteps";
 import Header from "./UI/Header";
+import Footer from "./UI/Footer"
 import SecondSection from "./UI/secondSection";
 import Banner from "./UI/Banner";
 import "aos/dist/aos.css";
@@ -437,6 +438,7 @@ const Home = (props) => {
       <FourSteps />
       <Banner />
       <SecondSection />
+      <Footer />
     </Grid>
   );
 };
