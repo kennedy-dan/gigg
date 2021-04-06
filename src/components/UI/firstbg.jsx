@@ -49,10 +49,15 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "",
   },
   cardBtn: {
-    marginTop: "0.1em",
+    marginTop: "0.7em",
     marginBottom: "0.1em",
     boxShadow: "none",
     fontFamily: theme.font.primary.main,
+    borderRadius:'0px',
+    [theme.breakpoints.down("xs")]: {
+      marginTop:'0.1em',
+      // fontSize:'8px'
+    },
 
     // marginRight: '0.5em'
   },

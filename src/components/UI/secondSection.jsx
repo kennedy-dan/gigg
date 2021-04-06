@@ -136,6 +136,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "11px",
     boxShadow: "none",
     fontFamily: theme.font.primary.main,
+    borderRadius:'0px'
   },
   typeCont: {
     marginTop: "24px",

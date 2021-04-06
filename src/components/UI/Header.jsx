@@ -5,7 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 
-import ClearIcon from '@material-ui/icons/Clear';
+import ClearIcon from "@material-ui/icons/Clear";
 import InputBase from "@material-ui/core/InputBase";
 import Badge from "@material-ui/core/Badge";
 import {
@@ -22,6 +22,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import MenuIcon from "@material-ui/icons/Menu";
 import { isCompositeComponent } from "react-dom/test-utils";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -31,14 +32,14 @@ const useStyles = makeStyles((theme) => ({
 
   growDrawer: {
     // ...theme.mixins.toolbar,
-    width: 'auto'
+    width: "auto",
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
     // display: "none",
-    fontFamily:theme.font.primary.main,
+    fontFamily: theme.font.primary.main,
 
     [theme.breakpoints.up("sm")]: {
       display: "block",
@@ -60,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
   titleScroll: {
     // display: "none",
     marginTop: "8px",
-    fontFamily:theme.font.primary.main,
+    fontFamily: theme.font.primary.main,
 
     [theme.breakpoints.down("xs")]: {
       // marginTop: "5em",
@@ -114,18 +115,17 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     fontWeight: 9000,
     color: theme.palette.primary.main,
-    fontFamily:theme.font.primary.main,
+    fontFamily: theme.font.primary.main,
 
     // color: "white",
     fontSize: "1em",
-   
   },
   tabScrolled: {
     marginLeft: "25px",
     minWidth: 5,
     textTransform: "none",
     fontWeight: 9000,
-    fontFamily:theme.font.primary.main,
+    fontFamily: theme.font.primary.main,
     color: "black",
     fontSize: "1em",
   },
@@ -133,18 +133,25 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "13px",
     color: theme.palette.primary.main,
     boxShadow: "none",
-    borderRadius:0,
-    fontFamily:theme.font.primary.main,
-    textTransform:'none'
+    borderRadius: 0,
+    fontFamily: theme.font.primary.main,
+    textTransform: "none",
+    "&:hover": {
+      boxShadow:'none',
+      backgroundColor:theme.palette.secondary.main,
+      textDecoration:'none',
+      color: theme.palette.primary.main,
 
+      
+    }
   },
   scrollBtn: {
     fontSize: "13px",
-    color: 'black',
+    color: "black",
     boxShadow: "none",
-    borderRadius:0,
-    fontFamily:theme.font.primary.main,
-    textTransform:'none'
+    borderRadius: 0,
+    fontFamily: theme.font.primary.main,
+    textTransform: "none",
   },
   btnCont: {
     marginTop: "6px",
@@ -155,29 +162,28 @@ const useStyles = makeStyles((theme) => ({
   },
   drawer: {
     backgroundColor: theme.palette.secondary.main,
-    height: '100%'
+    height: "100%",
   },
   drawerList: {
     // color: 'black',
-    fontSize: '17px',
-    fontWeight: '50px',
+    fontSize: "17px",
+    fontWeight: "50px",
     color: theme.palette.primary.main,
-    textAlign:'center'
+    textAlign: "center",
   },
   mainListIttem: {
-    marginTop: '2em'
+    marginTop: "2em",
   },
   drawerRegBtnItem: {
     color: theme.palette.primary.main,
-    fontSize: '17px',
+    fontSize: "17px",
   },
-  cancelIcon : {
-    fontSize: '30px',
-    marginRight: '45px',
-    marginTop:'10px',
+  cancelIcon: {
+    fontSize: "30px",
+    marginRight: "31px",
+    marginTop: "10px",
     color: theme.palette.primary.main,
-
-  }
+  },
 }));
 
 export default function Header() {
@@ -185,7 +191,7 @@ export default function Header() {
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-  const [openDrawer, setOpendrawer] = useState( false);
+  const [openDrawer, setOpendrawer] = useState(false);
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -194,9 +200,12 @@ export default function Header() {
   });
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-  
   const toggleDrawer = (anchor, open) => (event) => {
-    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+    if (
+      event &&
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
       return;
     }
 
@@ -248,14 +257,19 @@ export default function Header() {
       </Grid>
       <Grid item className={classes.btnCont}>
         <Grid container>
-          <Button   className={`${classes.btn} ${
-                trigger === false ? "" : classes.scrollBtn
-              }`}>
+          <Button
+            // className={`${classes.btn} ${
+            //   trigger === false ? "" : classes.scrollBtn
+            // }`}
+            component={Link}
+            to='/signin'
+            className={classes.btn} variant="contained" color="secondary"
+          >
             Log in
           </Button>
-          <Button className={classes.btn} variant="contained" color="secondary">
+          {/* <Button className={classes.btn} variant="contained" color="secondary">
             Register
-          </Button>
+          </Button> */}
         </Grid>
       </Grid>
     </React.Fragment>
@@ -264,46 +278,73 @@ export default function Header() {
   const drawer = (
     <React.Fragment>
       <SwipeableDrawer
-      anchor={'top'}
+        anchor={"top"}
         disableBackdropTransition={!iOS}
         disableDiscovery={iOS}
         open={openDrawer}
         onClose={() => setOpendrawer(false)}
         onOpen={() => setOpendrawer(true)}
-        classes={{paper: classes.drawer}}
+        classes={{ paper: classes.drawer }}
       >
         <div className={classes.growDrawer} />
-        <Grid container direction='column'>
-          <Grid container justify='flex-end'>
-            <ClearIcon className={classes.cancelIcon} onClick={() => setOpendrawer(false)}/>
+        <Grid container direction="column">
+          <Grid container justify="flex-end">
+            <ClearIcon
+              className={classes.cancelIcon}
+              onClick={() => setOpendrawer(false)}
+            />
           </Grid>
-        <Grid container justify='center'>
-        <List disablePadding justify='center'>
-          <ListItem  button onClick={() => setOpendrawer(false)} className={classes.mainListIttem}>
-            <ListItemText disableTypography className={classes.drawerList}>Home</ListItemText>
-          </ListItem>
-          <ListItem  button onClick={() => setOpendrawer(false)}>
-            <ListItemText disableTypography className={classes.drawerList}>Services</ListItemText>
-          </ListItem>
-          <ListItem  button onClick={() => setOpendrawer(false)}>
-            <ListItemText disableTypography className={classes.drawerList}>Home</ListItemText>
-          </ListItem>
-          <ListItem  button onClick={() => setOpendrawer(false)}>
-            <ListItemText disableTypography className={classes.drawerList}>Contacts</ListItemText>
-          </ListItem>
-          <ListItem  button onClick={() => setOpendrawer(false)}>
-            <ListItemText disableTypography className={classes.drawerList}>Contacts</ListItemText>
-          </ListItem>
-          <ListItem  button onClick={() => setOpendrawer(false)}>
-            <ListItemText disableTypography className={classes.drawerList}>Login</ListItemText>
-          </ListItem>
-          <ListItem  button onClick={() => setOpendrawer(false)} style={{alignSelf: 'center'}} >
-            <ListItemText disableTypography className={classes.drawerRegBtnItem}>Register</ListItemText>
-          </ListItem>
-        </List>
+          <Grid container justify="center">
+            <List disablePadding justify="center">
+              <ListItem
+                button
+                onClick={() => setOpendrawer(false)}
+                className={classes.mainListIttem}
+              >
+                <ListItemText disableTypography className={classes.drawerList}>
+                  Home
+                </ListItemText>
+              </ListItem>
+              <ListItem button onClick={() => setOpendrawer(false)}>
+                <ListItemText disableTypography className={classes.drawerList}>
+                  Services
+                </ListItemText>
+              </ListItem>
+              <ListItem button onClick={() => setOpendrawer(false)}>
+                <ListItemText disableTypography className={classes.drawerList}>
+                  Home
+                </ListItemText>
+              </ListItem>
+              <ListItem button onClick={() => setOpendrawer(false)}>
+                <ListItemText disableTypography className={classes.drawerList}>
+                  Contacts
+                </ListItemText>
+              </ListItem>
+              <ListItem button onClick={() => setOpendrawer(false)}>
+                <ListItemText disableTypography className={classes.drawerList}>
+                  Contacts
+                </ListItemText>
+              </ListItem>
+              <ListItem button onClick={() => setOpendrawer(false)}>
+                <ListItemText disableTypography className={classes.drawerList}>
+                  Login
+                </ListItemText>
+              </ListItem>
+              <ListItem
+                button
+                onClick={() => setOpendrawer(false)}
+                style={{ alignSelf: "center" }}
+              >
+                <ListItemText
+                  disableTypography
+                  className={classes.drawerRegBtnItem}
+                >
+                  Register
+                </ListItemText>
+              </ListItem>
+            </List>
+          </Grid>
         </Grid>
-        </Grid>
-        
       </SwipeableDrawer>
 
       <IconButton onClick={() => setOpendrawer(!openDrawer)}>

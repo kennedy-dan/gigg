@@ -124,9 +124,9 @@ const useStyles = makeStyles((theme) => ({
   arrowIcon: {
     fontSize: "25px",
     marginRight: "1.5em",
-    marginBottom: "4em",
+    marginBottom: "3em",
     [theme.breakpoints.down("sm")]: {
-      marginBottom: "6em",
+      marginBottom: "5em",
       marginRight: "1.1em",
     },
     [theme.breakpoints.down("xs")]: {
@@ -330,7 +330,7 @@ const FourSteps = (props) => {
               className={classes.fontSize}
               justify="center"
             >
-              <h6>Advertize</h6>
+              <h6>Advertize goods</h6>
               <Typography>Lorem ipsum, dolor sit amet consectetur</Typography>
             </Grid>
           </Grid>

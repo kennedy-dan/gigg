@@ -193,6 +193,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "12px",
     boxShadow: "none",
     fontFamily: theme.font.primary.main,
+    borderRadius:'0px',
     [theme.breakpoints.down("xs")]: {
       fontSize: "10px",
     },

@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     "&:before": {
       content: '"-"',
       position: "absolute",
-      height: "2000px",
+      height: "3000px",
       width: "2000px",
       borderRadius: "50%",
       background: theme.palette.secondary.main,
@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
     "&:before": {
       content: '"-"',
       position: "absolute",
-      height: "2000px",
+      height: "3000px",
       width: "2000px",
       borderRadius: "50%",
       background: theme.palette.secondary.main,
@@ -100,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
         bottom: '38%',
         right:'initial',
         
-        height:'530px',
+        maxHeight:'520px',
         width:'2000px',
         // top:'28%'
       }
@@ -127,7 +127,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]:{
       width:'100%',
       left:'50%',
-      top:'98%',
+      top:'78%',
       transform: "translate(-50%, -100%)",
     transition: "1s 0.7s ease-in-out",
 
@@ -194,8 +194,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
     fontFamily: theme.font.primary.main,
     fontSize: "12px",
-    borderRadius: "15px",
+    borderRadius: "0px",
     margin: "10px 0",
+    "&:hover": {
+    backgroundColor: theme.palette.secondary.main,
+
+    }
   },
   root: {
     background: "#e4fcfa",
@@ -203,10 +207,11 @@ const useStyles = makeStyles((theme) => ({
     // lineHeight: 1,
     fontWeight: 600,
     width: "290px",
+    // fontSize:'20px'
     // height: "20px",
   
 
-    fontSize: "90px",
+    fontSize: "190px",
     border: "1px solid black",
     // color: "#333",
     // borderRadius: "99px",
@@ -437,7 +442,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     fontFamily: theme.font.primary.main,
     fontSize: "12px",
-    borderRadius: "15px",
+    borderRadius: "none",
     [theme.breakpoints.down('xs')]:{
       fontSize: '10px'
      },
@@ -587,6 +592,7 @@ const Signin = (props) => {
                 className={classes.root}
                 placeholder="password"
                 InputProps={{
+                  
                   endAdornment: (
                     <InputAdornment position="end">
                       <IconButton
