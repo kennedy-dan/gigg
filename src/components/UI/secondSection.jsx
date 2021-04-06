@@ -133,10 +133,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   btnType: {
-    fontSize: "11px",
+    fontSize: "12px",
     boxShadow: "none",
     fontFamily: theme.font.primary.main,
-    borderRadius:'0px'
+    borderRadius:'0px',
+    padding:'5px 20px',
+    borderRadius: '5px',
+    textTransform:'none'
   },
   typeCont: {
     marginTop: "24px",

@@ -196,12 +196,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
     fontFamily: theme.font.primary.main,
     fontSize: "12px",
-    borderRadius: "0px",
+    padding:'5px 20px',
+    borderRadius: '5px',
     margin: "10px 0",
+    textTransform:'none',
     "&:hover": {
     backgroundColor: theme.palette.secondary.main,
 
-    }
+    },
+   
   },
   root: {
     background: "#e4fcfa",
@@ -444,9 +447,16 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     fontFamily: theme.font.primary.main,
     fontSize: "12px",
-    borderRadius: "0px",
+    padding:'5px 20px',
+    borderRadius: "5px",
+    textTransform:'none',
+
     [theme.breakpoints.down('xs')]:{
-      fontSize: '10px'
+      fontSize: '10px',
+  
+      
+    
+        
      },
   },
   h3: {
@@ -623,7 +633,7 @@ const Signin = (props) => {
               />
 
               <Button variant="contained" className={classes.btn}>
-                Login
+                Sign in
               </Button>
            
             </form>
@@ -736,7 +746,7 @@ const Signin = (props) => {
                 }}
               />
 
-              <Button className={classes.btn}>Login</Button>
+              <Button className={classes.btn}>Sign up</Button>
              
             </form>
           </div>
@@ -762,7 +772,7 @@ const Signin = (props) => {
               </Button>
             </div>
             <img
-              src={secondSecFiles}
+              src={secureFiles}
               className={animate ? classes.leftimgAnime : classes.leftImg}
             />
           </div>

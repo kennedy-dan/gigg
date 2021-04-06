@@ -46,9 +46,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
     fontFamily: theme.font.primary.main,
     borderRadius: 0,
-    fontSize: "13px",
+    fontSize: "12px",
     textTransform: "none",
-    boxShadow:'none',
+    padding:'5px 20px',
+    borderRadius: '5px',
     "&:hover":{
     backgroundColor: theme.palette.secondary.main,
     },

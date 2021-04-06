@@ -130,18 +130,24 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1em",
   },
   btn: {
-    fontSize: "13px",
+    fontSize: "12px",
     color: theme.palette.primary.main,
     boxShadow: "none",
-    borderRadius: 0,
     fontFamily: theme.font.primary.main,
     textTransform: "none",
+    padding: "5px 20px",
+    borderRadius: "5px",
+
     "&:hover": {
       boxShadow: "none",
       backgroundColor: theme.palette.secondary.main,
       textDecoration: "none",
       color: theme.palette.primary.main,
     },
+    "&:active":{
+      outline:"none",
+
+    }
   },
   scrollBtn: {
     fontSize: "13px",
@@ -168,17 +174,16 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "50px",
     color: theme.palette.primary.main,
     textAlign: "center",
-    boxShadow:'none',
-    borderRadius:'0px',
-    "&:hover":{
-    boxShadow:'0px',
-    // border:"1px solid white"
-
+    boxShadow: "none",
+    borderRadius: "0px",
+    "&:hover": {
+      boxShadow: "0px",
+      // border:"1px solid white"
     },
     "&:active": {
       // border:'0px solid yellow',
-      outline:'none'
-    }
+      outline: "none",
+    },
   },
   mainListIttem: {
     marginTop: "2em",
