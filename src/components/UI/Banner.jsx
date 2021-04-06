@@ -128,7 +128,7 @@ const Banner = (props) => {
           data-aos-easing="ease-in-sine"
           data-aos-duration="600"
         >
-          About Neeoe
+          About Logo
         </Typography>
       </Grid>
       <Grid
@@ -201,7 +201,7 @@ const Banner = (props) => {
               data-aos-easing="ease-in-sine"
               data-aos-duration="600"
             >
-              About Neeoe
+              About Logo
             </Typography>
           </Grid>
           <Grid

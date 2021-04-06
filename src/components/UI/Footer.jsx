@@ -167,7 +167,7 @@ const Footer = (props) => {
         >
           <Grid item>
             <Typography variant="h6" className={classes.firstText}>
-              Neeeo
+              Logo
             </Typography>
             <div className={classes.subTextCont}>
               <Typography
@@ -198,7 +198,7 @@ const Footer = (props) => {
           <Grid direction="column">
             <Typography className={classes.otherHeadText}>About us</Typography>
             <div className={classes.prodTypo}>
-              <Typography className={classes.subTypo}>About Neeo</Typography>
+              <Typography className={classes.subTypo}>About Logo</Typography>
               <Typography className={classes.subTypo}>Contact us</Typography>
               <Typography className={classes.subTypo}>Features</Typography>
               <Typography className={classes.subTypo}>Carriers</Typography>

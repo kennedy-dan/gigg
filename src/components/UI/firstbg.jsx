@@ -151,7 +151,7 @@ const FirstBaground = (props) => {
           <Grid justify="center" container className={classes.header}>
             <Grid item container justify="center" alignItems="center">
               <Typography style={{}} className={classes.mainText}>
-                Find Anything You want To Purchase on Neeoe 
+                Find Anything You want To Purchase on Lorem 
               </Typography>
             </Grid>
             

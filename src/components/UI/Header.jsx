@@ -395,7 +395,7 @@ export default function Header() {
                 variant="h7"
                 noWrap
               >
-                Neooe
+                Logo
               </Typography>
             </Grid>
             {matchesSM ? drawer : tabs}
