@@ -310,8 +310,8 @@ export default function Header() {
               onClick={() => setOpendrawer(false)}
             />
           </Grid>
-          <Grid container justify="center">
-            <List disablePadding justify="center">
+          <Grid container justify="center" align='center'  style={{marginTop: '80px'}}>
+            <List disablePadding justify="center" alignItems='center'>
               <ListItem
                 button
                 onClick={() => setOpendrawer(false)}
