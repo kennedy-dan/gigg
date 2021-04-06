@@ -137,7 +137,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "none",
     fontFamily: theme.font.primary.main,
     borderRadius:'0px',
-    padding:'5px 20px',
+    padding:'7px 20px',
     borderRadius: '5px',
     textTransform:'none'
   },
@@ -254,7 +254,7 @@ const SecondSection = (props) => {
               color="secondary"
               className={classes.btnType}
             >
-              Blah it
+              Sell it
             </Button>
           </Grid>
         </Grid>

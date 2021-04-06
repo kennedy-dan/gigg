@@ -196,7 +196,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
     fontFamily: theme.font.primary.main,
     fontSize: "12px",
-    padding:'5px 20px',
+    padding:'7px 20px',
     borderRadius: '5px',
     margin: "10px 0",
     textTransform:'none',
@@ -447,7 +447,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     fontFamily: theme.font.primary.main,
     fontSize: "12px",
-    padding:'5px 20px',
+    padding:'7px 20px',
     borderRadius: "5px",
     textTransform:'none',
 

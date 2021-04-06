@@ -135,7 +135,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "none",
     fontFamily: theme.font.primary.main,
     textTransform: "none",
-    padding: "5px 20px",
+    padding: "7px 20px ",
     borderRadius: "5px",
 
     "&:hover": {

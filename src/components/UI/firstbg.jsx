@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: theme.font.primary.main,
     borderRadius:'0px',
     textTransform: "none",
-    padding:'5px 20px',
+    padding:'7px 20px',
     borderRadius: '5px',
     fontSize: "12px",
 

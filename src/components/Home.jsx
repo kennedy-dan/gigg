@@ -193,7 +193,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "12px",
     boxShadow: "none",
     fontFamily: theme.font.primary.main,
-    padding:'5px 20px',
+    padding:'7px 20px',
     borderRadius: '5px',
     textTransform: "none",
 
@@ -302,7 +302,7 @@ const Home = (props) => {
                 color="secondary"
                 className={classes.btnType}
               >
-                Blah it
+                View 
               </Button>
             </Grid>
           </Grid>
