@@ -328,12 +328,12 @@ export default function Header() {
               </ListItem>
               <ListItem button onClick={() => setOpendrawer(false)}>
                 <ListItemText disableTypography className={classes.drawerList}>
-                  Home
+                  Blog
                 </ListItemText>
               </ListItem>
               <ListItem button onClick={() => setOpendrawer(false)}>
                 <ListItemText disableTypography className={classes.drawerList}>
-                  Contacts
+                Event
                 </ListItemText>
               </ListItem>
               <ListItem button onClick={() => setOpendrawer(false)}>
@@ -395,7 +395,7 @@ export default function Header() {
                 variant="h7"
                 noWrap
               >
-                Logo
+                Mynebor
               </Typography>
             </Grid>
             {matchesSM ? drawer : tabs}
