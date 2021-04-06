@@ -23,6 +23,8 @@ import Input from "@material-ui/core/Input";
 import InputLabel from "@material-ui/core/InputLabel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import secureFiles from "../assets/securefiles.svg";
+import secondSecFiles from "../assets/secsecurefiles.svg"
+
 
 import {
   faFacebookF,
@@ -100,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
         bottom: '38%',
         right:'initial',
         
-        maxHeight:'520px',
+        height:'520px',
         width:'2000px',
         // top:'28%'
       }
@@ -442,7 +444,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     fontFamily: theme.font.primary.main,
     fontSize: "12px",
-    borderRadius: "none",
+    borderRadius: "0px",
     [theme.breakpoints.down('xs')]:{
       fontSize: '10px'
      },
@@ -500,6 +502,9 @@ const useStyles = makeStyles((theme) => ({
     // margin:'12px'
     // marginRight: "14px",
   },
+  resize:{
+    fontSize:'15px'
+  }
 }));
 
 const defaultProps = {
@@ -572,6 +577,9 @@ const Signin = (props) => {
                 className={classes.root}
                 placeholder="Email"
                 InputProps={{
+                  classes:{
+                    input: classes.resize
+                  },
                   startAdornment: (
                     <InputAdornment position="start">
                       <AccountCircleIcon />
@@ -592,7 +600,9 @@ const Signin = (props) => {
                 className={classes.root}
                 placeholder="password"
                 InputProps={{
-                  
+                  classes:{
+                    input: classes.resize
+                  },
                   endAdornment: (
                     <InputAdornment position="end">
                       <IconButton
@@ -637,6 +647,9 @@ const Signin = (props) => {
                 className={classes.root}
                 placeholder="Email"
                 InputProps={{
+                  classes:{
+                    input: classes.resize
+                  },
                   startAdornment: (
                     <InputAdornment position="start">
                       <AccountCircleIcon />
@@ -657,6 +670,9 @@ const Signin = (props) => {
                 className={classes.root}
                 placeholder="password"
                 InputProps={{
+                  classes:{
+                    input: classes.resize
+                  },
                   endAdornment: (
                     <InputAdornment position="end">
                       <IconButton
@@ -687,6 +703,9 @@ const Signin = (props) => {
                 className={classes.root}
                 placeholder="Name"
                 InputProps={{
+                  classes:{
+                    input: classes.resize
+                  },
                   startAdornment: (
                     <InputAdornment position="start">
                       <AccountCircleIcon />
@@ -706,6 +725,9 @@ const Signin = (props) => {
                 className={classes.root}
                 placeholder="Phone Number"
                 InputProps={{
+                  classes:{
+                    input: classes.resize
+                  },
                   startAdornment: (
                     <InputAdornment position="start">
                       <AccountCircleIcon />
@@ -740,7 +762,7 @@ const Signin = (props) => {
               </Button>
             </div>
             <img
-              src={secureFiles}
+              src={secondSecFiles}
               className={animate ? classes.leftimgAnime : classes.leftImg}
             />
           </div>

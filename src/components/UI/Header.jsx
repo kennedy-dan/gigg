@@ -137,13 +137,11 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: theme.font.primary.main,
     textTransform: "none",
     "&:hover": {
-      boxShadow:'none',
-      backgroundColor:theme.palette.secondary.main,
-      textDecoration:'none',
+      boxShadow: "none",
+      backgroundColor: theme.palette.secondary.main,
+      textDecoration: "none",
       color: theme.palette.primary.main,
-
-      
-    }
+    },
   },
   scrollBtn: {
     fontSize: "13px",
@@ -170,6 +168,17 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "50px",
     color: theme.palette.primary.main,
     textAlign: "center",
+    boxShadow:'none',
+    borderRadius:'0px',
+    "&:hover":{
+    boxShadow:'0px',
+    // border:"1px solid white"
+
+    },
+    "&:active": {
+      // border:'0px solid yellow',
+      outline:'none'
+    }
   },
   mainListIttem: {
     marginTop: "2em",
@@ -262,8 +271,10 @@ export default function Header() {
             //   trigger === false ? "" : classes.scrollBtn
             // }`}
             component={Link}
-            to='/signin'
-            className={classes.btn} variant="contained" color="secondary"
+            to="/signin"
+            className={classes.btn}
+            variant="contained"
+            color="secondary"
           >
             Log in
           </Button>
@@ -325,12 +336,19 @@ export default function Header() {
                   Contacts
                 </ListItemText>
               </ListItem>
-              <ListItem button onClick={() => setOpendrawer(false)}>
+              <ListItem
+                button
+                onClick={() => setOpendrawer(false)}
+                component={Link}
+                to="/signin"
+                className={classes.drawerList}
+                style={{}}
+              >
                 <ListItemText disableTypography className={classes.drawerList}>
                   Login
                 </ListItemText>
               </ListItem>
-              <ListItem
+              {/* <ListItem
                 button
                 onClick={() => setOpendrawer(false)}
                 style={{ alignSelf: "center" }}
@@ -341,7 +359,7 @@ export default function Header() {
                 >
                   Register
                 </ListItemText>
-              </ListItem>
+              </ListItem> */}
             </List>
           </Grid>
         </Grid>
